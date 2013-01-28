@@ -1,0 +1,31 @@
+Buen día <%= @activity.person_responsable %>
+
+Gracias por usar el sistema de solicitud de salas.
+
+<%= @activity.person_reg %> ha registrado una solicitud de salas en su nombre con las siguientes características:
+
+Folio de la solicitud: <%= @activity.id %>
+
+DATOS DE LA ACTIVIDAD
+
+  Título: <%= @activity.name %>
+  Descripción: <%= @activity.description %>
+  Participantes: <%= @activity.participants %>
+  Instituciones que colaboran: <%= @activity.institutions %>
+  Tipo de actividad: <%= ActivityType.find(@activity.activity_type_id).name %>
+  Dirigido a: <% if @activity.opening == "abierto" %>Público en general<% else %>Sólo público con invitación<% end %>
+  Alcance: <%= @activity.reach %>
+
+DATOS DE LAS SESIONES <% counter=0 %><% @activity.reservations.each do |item| %><% if item != nil %>
+  Sesión <%= counter+=1 %>:
+     Fecha: <%= item[:start_date] %>
+     Horario: <%= item[:start_time].strftime("%H:%M") %> - <%= item[:end_time].strftime("%H:%M") %>
+     Número aproximado de asistentes: <%= item[:assistants_num] %>
+     Espacio solicitado : <%= Space.find(item[:space_id]).name %>  
+     Solicitud de servicios adicionales: <%= item[:details] %><% end %><% end %>
+
+La contraseña con la que podrá hacer modificaciones a la misma es: "<%= @pconf %>" 
+
+Esta solicitud será revisada por el administrador del espacio que ha señalado, el cuál se pondrá en contacto con usted en caso de haber algún problema o duda, si no hubiése alguna, su solicitud será autorizada y planificada en la lista de actividades del instituto.
+
+Tras la autorización de su solicitud se le notificará por esta vía, por lo que se le ruega este pendiente, pues de no recibir esa notificación significará que su solicitud no ha sido revisada y deberá ponerse en contacto con el administrador correspondiente.

@@ -1,0 +1,11 @@
+<h1>Paso 2: Indicar sesiones</h1>
+
+<h2>Sesiones de la actividad</h2>
+
+<%= form_tag(:action => "create_reservation") %>
+<table>
+<%= render(:partial => "form", :controller => "reservations")%>
+</table>
+<br />
+<input type="submit" value="Continuar" />
+<%= end_form_tag %>

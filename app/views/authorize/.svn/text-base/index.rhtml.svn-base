@@ -1,0 +1,31 @@
+<p>Las salas que usted administra son :</p>
+<font color="#663300" size="2">
+   <ul>
+<% for space in @spaces do %>
+   <li><%= space.name %></li> 
+<% end %>
+   </ul>
+</font>
+
+<table>
+ <tr><th>Consultas</th>
+     <th>Acciones</th>
+ </tr>
+ <tr><td><ul>
+   <li><%= link_to 'Solicitudes vigentes sin atender', :action => 'show',:context=>'unauthorized' %></li>
+   <li><%= link_to 'Solicitudes vigentes autorizadas', :action => 'show',:context=>'authorized' %></li> 
+   <li><%= link_to 'Solicitudes vigentes canceladas', :action => 'show',:context=>'canceled' %></li>
+   <li><%= link_to 'Solicitudes expiradas', :action => 'show',:context=>'expired'%></li> 
+   <li><%= link_to 'Actividades planificadas por periodo', :action => 'report' %></li>
+   </ul>
+  </td>
+  <td valign="top"><ul>
+   <li><%= link_to 'Cambiar anticipación de registro', :action => 'list', :controller=>'advance_days' %></li>
+   <li><%= link_to 'Cambiar su contraseña', :action => 'change_pass' %></li> 
+   </ul>
+  </td>
+ </tr> 
+</table>
+
+
+

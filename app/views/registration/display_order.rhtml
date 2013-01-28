@@ -1,0 +1,98 @@
+<h1 class="title">Paso 2: Confirmar la solicitud</h1>
+<table>
+ <tr align="center">
+     <td colspan="4"><%= link_to 'Cancelar solicitud', :action => 'cancel_order' %>  <b>|</b>  
+     <%= link_to 'Agregar sesión', :action => 'get_reservations' %>  <b>|</b>  
+     <%= link_to 'Modificar datos', :action => 'change_order' %>  <b>|</b> 
+     <%= link_to 'Confirmar solicitud', :action => 'save_order' %></td>
+ </tr>
+ <tr><td colspan="4"><hr/></td></tr>
+ <tr><td colspan="4"><b>DATOS DE LA ACTIVIDAD</b></td></tr>
+ <tr><td colspan="4"><hr/></td></tr>
+
+ <tr><td>Título:</td>
+     <td colspan="4"><%= @newactivity[0].name %></td></tr>
+
+ <tr><td>Descripción:</td>
+     <td colspan="4"><%= line_format((@newactivity[0].description).to_s) %></td></tr>
+
+ <tr><td>Participantes:</td>
+     <td colspan="4"><%= line_format((@newactivity[0].participants).to_s) %></td></tr>
+
+ <tr><td>Instituciones <br/>que colaboran:</td>
+     <td colspan="4"><%= line_format((@newactivity[0].institutions).to_s) %></td></tr>
+
+ <tr><td>Tipo de actividad: </td>
+     <td colspan="4"><%= ActivityType.find(@newactivity[0].activity_type_id).name.capitalize %>
+
+ <tr><td>Dirigido a: </td>
+   <% if @newactivity[0].opening == "abierto" %>
+     <td>Público en general</td>
+   <% else %>
+     <td>Sólo público con invitación</td>
+   <% end %>
+     <td>Alcance: <%= @newactivity[0].reach.capitalize %></td></tr>
+
+ <tr><td colspan="4"><b>DATOS DE CONTACTO</b></td></tr>
+ <tr><td colspan="4"><hr/></td></tr>
+
+ <tr><td>Persona que registra:</td>
+     <td colspan="4"><%= @newactivity[0].person_reg %></td></tr>
+
+ <tr><td>Académico responsable:</td>
+     <td colspan="4"><%= @newactivity[0].person_responsable  %></td></tr>
+
+ <tr><td>Unidad o Área:</td>
+     <td colspan="4"><%= Area.find(@newactivity[0].area_id).name %></td></tr>
+
+ <tr><td>Correo electrónico:</td>
+     <td colspan="4"><%= @newactivity[0].email_contact  %></td></tr>
+
+ <tr><td>Teléfono:</td>
+     <td colspan="4"><%= @newactivity[0].phone_contact  %></td></tr>
+
+ <tr></tr>
+
+ <tr><td colspan="4"><b>DATOS DE LA(S) SESION(ES)</b></td></tr>
+ <tr><td colspan="4"><hr/></td></tr>
+
+<% counter=0 %>
+<% @newreservations.each do |item| %>
+   <% if item != nil %>
+	<tr><td><strong>Sesión <%= counter+=1 %>:</strong></td>
+            <td>Fecha : <%= item[:start_date] %></td>
+<!-- Linea anterior al cambio de manejo de horario -->
+<!--	    <td>Horario : <%= item[:schedule] %></td></tr> -->
+	    <td>Horario : <%= item[:start_time].strftime("%H:%M") %> - <%= item[:end_time].strftime("%H:%M") %></td></tr> 
+        <tr><td></td><td>Ponentes:  <%= item[:num_rapporteurs] %></td>
+                     <td>Asistentes:  <%= item[:assistants_num] %></td></tr>
+        <tr><td></td><td colspan="3">Espacio solicitado : <%= Space.find(item[:space_id]).name %></td>              
+            </tr>
+        <tr><td></td><td colspan="4">Detalles : <%= item[:details] %></td></tr>
+     <% if Space.find(item[:space_id]).max_people < item[:assistants_num] %>
+        <tr><td></td><td colspan="4"><small><font color="red">Observaciones: </font><i>La sala que solicita no es suficiente para el número de asistentes, por lo que se le recomienda reservar un espacio adjunto.</i></small></td></tr>
+     <% end %>
+        <div class="">
+        <tr><td></td><td><%= link_to 'Quitar', {:action => 'delete',:id => "#{counter}"} %>  |  
+                         <%= link_to 'Modificar', {:action => 'change_session',:id => "#{counter}"} %></td>
+        </tr>
+        </div>
+   <% end %>
+<% end %>
+
+ <tr></tr>
+
+ <tr><td colspan="4"><b>SERVICIOS GARANTIZADOS PARA CADA SESIÓN</b></td></tr>
+ <tr><td colspan="4"><hr/></td></tr>
+ <tr><td></td>
+  <td colspan="3"><ul>
+<% if @services %>
+  <% for service in @services %>  
+    <li><%= Service.find(service.service_id).name %></li>   
+  <% end %>
+<% else %>
+    <li>Este tipo de actividad no tiene servicios garantizados</li>   
+<% end %>
+  </ul></td>
+ </tr>
+</table>

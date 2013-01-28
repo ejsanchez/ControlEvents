@@ -1,0 +1,19 @@
+<div id="loginreq">
+<% form_tag :action => 'authorize' do %>
+<table>
+ <tr>
+   <td>Usuario:</td>
+   <td><%= text_field("manager", "login","size"=>"15") %></td>
+ </tr>
+ <tr>
+   <td>Contraseña:</td>
+   <td><%= password_field("manager", "password","size"=>"15") %></td>
+ </tr>
+ <tr>
+   <td></td>
+   <td><input type="submit" value=" Entrar " /></td>
+ </tr>
+</table>
+
+<% end %>
+</div>

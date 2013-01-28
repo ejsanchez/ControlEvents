@@ -1,0 +1,71 @@
+<%= error_messages_for 'manager' %>
+
+<!--[form:manager]-->
+
+ <tr>
+   <td><label for="manager_first_name"><font color=red>*</font> Nombre(s): </label></td>
+   <td><%= text_field 'manager', 'first_name'  %></td>
+ </tr>
+ <tr>
+   <td><label for="manager_last_name"><font color=red>*</font> Apellido paterno: </label></td>
+   <td><%= text_field 'manager', 'last_name'  %></td>
+ </tr>
+ <tr>
+   <td><label for="manager_maiden_name"><font color=red>*</font> Apellido materno: </label></td>
+   <td><%= text_field 'manager', 'maiden_name'  %></td>
+ </tr>
+
+
+ <% if params[:context] == 'edit' %>
+ <tr>
+   <td><label for="manager_login"><font color=red></font> Usuario: </label></td>
+   <td><b><%= @manager.login %></b></td>
+ </tr> 
+ <tr>
+   <td><label for="manager_maiden_name"><font color=red>*</font> Rol: </label></td>
+   <td><select name="manager[role]">
+    <% if @manager.role==1 %>
+     <option value=1 selected="selected">Administrador</option> 
+     <option value=2>Secretario</option> 
+    <% else %>
+     <option value=1>Administrador</option> 
+     <option value=2 selected="selected">Secretario</option> 
+    <% end %>
+   </td>
+ </tr> 
+ <% else %>
+ <tr>
+   <td><label for="manager_maiden_name"><font color=red>*</font> Rol: </label></td>
+   <td><select name="manager[role]">
+     <option value=1 selected="selected">Administrador</option> 
+     <option value=2>Secretario</option> 
+   </td>
+ </tr>
+ <tr>
+   <td><label for="manager_login"><font color=red>*</font> Usuario: </label></td>
+   <td><%= text_field 'manager', 'login', "size" => "10" %></td>
+ </tr>
+ <tr>
+   <td><label for="manager_password"><font color=red>*</font> Contraseña: </label></td>
+   <td><%= password_field 'manager', 'password', "maxlength" => 10, "size" => "10" %></td>
+   <td><label for="manager_password"><font color=red>*</font> Confirme<br/>Contraseña: </label></td>
+   <td><%= password_field 'manager', 'password_confirmation', "maxlength" => 10, "size"=>10 %></td>
+ </tr>
+ <% end %>
+ <tr>
+   <td><label for="manager_location">Ubicación: </label></td>
+   <td><%= text_field 'manager', 'location'  %></td>
+ </tr>
+
+ <tr>
+   <td><label for="manager_phone"><font color=red>*</font> Teléfono: </label></td>
+   <td><%= text_field 'manager', 'phone'  %></td>
+ </tr>
+
+ <tr>
+   <td><label for="manager_email"><font color=red>*</font> Correo electrónico: </label></td>
+   <td><%= text_field 'manager', 'email'  %></td>
+ </tr>
+
+<!--[eoform:manager]-->
+

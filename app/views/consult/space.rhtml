@@ -1,0 +1,8 @@
+<h1>Programación de Actividades Académicas</h1>
+
+<ul>
+<% for space in @spaces %>
+    <li><%= link_to space.name, :action => 'select_month', :id => space %></li>
+<% end %>
+</ul>
+<p>NOTA: Esta búsqueda muestra sólo las actividades cuyas solicitudes de reservación ya han sido aprobadas.</p>

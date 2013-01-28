@@ -1,0 +1,11 @@
+<h1>Paso 3: Agregar sesión</h1>
+
+<% form_for :reservation, @reservation,:url=>{:action=>"add_reservation"} do |f| %>
+   <%= render(:partial => "reservations/form",
+              :params => { :context => :registration})%>
+
+<table>
+<tr align="center"><td><input type="submit" value="Agregar sesión" /></td></tr>
+<% end %>
+<tr align="center"><td><%= link_to 'Regresar', :action => 'display_order' %></td></tr>
+</table>

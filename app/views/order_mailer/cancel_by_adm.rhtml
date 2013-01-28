@@ -1,0 +1,31 @@
+Buen día, este mensaje es para comunicarle que su solicitud de reservación de salas para la actividad con 
+folio <%= @activity.id %> ha sido cancelada por el administrador responsable del espacio que solicita.
+
+Si aún desea llevar a cabo la actividad deberá registrarla de nuevo.
+
+La actividad cancelada tiene las siguientes características:
+
+DATOS DE LA ACTIVIDAD
+
+  Título: <%= @activity.name %>
+  Descripción: <%= @activity.description %>
+  Participantes: <%= @activity.participants %>
+  Instituciones que colaboran: <%= @activity.institutions %>
+  Tipo de actividad: <%= ActivityType.find(@activity.activity_type_id).name %>
+  Dirigido a: <% if @activity.opening == "abierto" %>Público en general<% else %>Sólo público con invitación<% end %>
+  Alcance: <%= @activity.reach %>
+
+DATOS DE LAS SESIONES <% counter=0 %><% @activity.reservations.each do |item| %><% if item != nil %>
+  Sesión <%= counter+=1 %>:
+     Fecha: <%= item[:start_date] %>
+     Horario: <%= item[:start_time].strftime("%H:%M") %> - <%= item[:end_time].strftime("%H:%M") %>
+     Número aproximado de asistentes: <%= item[:assistants_num] %>
+     Espacio solicitado : <%= Space.find(item[:space_id]).name %> 
+     Solicitud de servicios adicionales: <%= item[:details] %><% end %><% end %> 
+
+Gracias por su atención. 
+
+Para cualquier aclaración, póngase en contacto con el administrador del espacio, quien es:
+
+<% man = Manager.find(Space.manager(Activity.space_asked(@activity.id))) %>
+<%= man.first_name%> <%= man.last_name%> <%= man.maiden_name%> y lo(a) puede localizar en el teléfono <%= man.phone %> o a la siguiente dirección de correo <%= man.email %>.

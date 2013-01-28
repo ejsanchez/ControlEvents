@@ -1,0 +1,55 @@
+<%= error_messages_for 'reservation' %>
+
+<!--[form:reservation]-->
+
+<table>
+
+<% form_for :reservation, @reservation, :url => { :action => "update_session", :id=> @ses} do |f| %>
+
+ <tr><td colspan="4"><b>DATOS DE LA SESIÓN</b></td></tr>
+ <tr><td colspan="4"><hr/></td></tr>
+ <tr><td><label for="reservation_start_date"><font color=red>*</font> Fecha: </label></td>
+     <td><%= date_field 'reservation', 'start_date', "size" => "10"%></td>
+ </tr>
+ <tr>
+     <td><label for="reservation_start_date"><font color=red>*</font> Hora de inicio: </label></td>
+     <td><%= select("reservation","start_time", Reservation::HOUR_OPTS,{:selected=>@reservation.start_time.strftime("%H:%M")}) %>
+     </td> 
+     <td colspan="2"><label for="reservation_end_time"><font color=red>*</font> Hora de fin:  </label>
+    <%= select("reservation","end_time", Reservation::HOUR_OPTS,{:selected=>@reservation.end_time.strftime("%H:%M")})%>      
+     </td>
+ </tr>
+
+ <tr><td colspan="2"><label for="reservation_num_rapporteurs"><font color=red>*</font> Número de ponentes:</label></td>
+     <td><%= text_field 'reservation', 'num_rapporteurs',"size"=>3  %></td></tr>
+
+ <tr><td colspan="2"><label for="reservation_assistants_num"><font color=red>*</font> Número aproximado de asistentes:</label></td>
+     <td><%= text_field 'reservation', 'assistants_num',"size"=>3  %></td></tr>
+
+ <tr><td><label for="reservation_space_id"><font color=red>*</font> Espacio deseado: </label></td>
+     <td colspan="4"><select name="reservation[space_id]">
+
+<% @spaces.each do |item|%>
+   <% if @reservation.space_id == item[:id] %>
+     <option value="<%=item[:id]%>" selected><%=item[:name]%> (cupo: <%=item[:max_people]%> personas) </option> 
+   <% else %>
+     <option value="<%=item[:id]%>"><%=item[:name]%> (cupo: <%=item[:max_people]%> personas) </option>
+   <% end %> 
+<% end %>
+  </select></td></tr>
+
+ <tr><td><label for="reservation_details">Detalles: </label></td>
+     <td colspan="4"><%= text_area 'reservation', 'details', "size" => "60", "rows" => "3"%></td>
+
+ <tr><td></td><td colspan="4"><small><i>  En esta sección se debe colocar cualquier solicitud para la sesión que no esté <br/>considerada dentro de las atenciones básicas para el tipo de actividad o alguna <br/>aclaración sobre la misma.</i></small></td></tr>
+
+ <tr><td><%= hidden_field 'reservation', 'applicant_ip', "value" => request.remote_ip %></td></tr>
+ <tr align="center"><td colspan="4"><%= submit_tag 'Guardar datos' %></td></tr>
+ <tr align="center"><td colspan="4"><%= link_to 'Regresar', :action => 'display_order' %></td></tr>
+     
+<% end %>
+
+</table>
+
+<!--[eoform:reservation]-->
+

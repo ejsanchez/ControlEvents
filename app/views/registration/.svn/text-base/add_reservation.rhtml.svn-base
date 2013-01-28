@@ -1,0 +1,3 @@
+<%= render_component(:action => "new",
+                     :controller => "reservations",
+                     :params => { :context => :registration}) %>

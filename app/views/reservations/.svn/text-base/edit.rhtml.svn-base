@@ -1,0 +1,42 @@
+<h1>Modificar datos de la sesión</h1>
+
+<% form_for :reservation, @reservation, :url=>{:action => 'update', :id => @reservation} do |f| %>
+
+<!--[form:reservation]-->
+
+<table>
+
+ <tr><td colspan="4"><b>DATOS DE LA SESIÓN</b></td></tr>
+ <tr><td colspan="4"><hr/></td></tr>
+ <tr><td><label for="reservation_start_date"><font color=red></font> Fecha: </label></td>
+     <td><%= @reservation.start_date %></td>
+
+     <td><label for="reservation_schedule"><font color=red></font> Horario: </label></td>
+     <td><%= @reservation.start_time.strftime("%H:%M") %> - <%= @reservation.end_time.strftime("%H:%M") %></td></tr>
+
+<tr><td colspan="2"><label for="reservation_num_rapporteurs"><font color=red>*</font> Número de ponentes:  </label></td><td colspan="2"><%= text_field 'reservation', 'num_rapporteurs',"size"=>3  %></td></tr>
+
+ <tr><td colspan="2"><label for="reservation_assistants_num"><font color=red>*</font> Número aproximado de asistentes:</label></td>
+     <td><%= text_field 'reservation', 'assistants_num',"size"=>3  %></td></tr>
+
+ <tr><td><label for="reservation_space_id"><font color=red></font> Espacio deseado: </label></td>
+     <td colspan="4"><%= Space.find(@reservation.space.id).name %></td></tr>
+
+ <tr><td><label for="reservation_details">Solicitud de servicios<br/> y/o detalles: </label></td>
+     <td colspan="4"><%= text_area 'reservation', 'details', "size" => "60", "rows" => "3"%></td>
+
+ <tr><td></td><td colspan="4"><small><i>  En esta sección se debe colocar cualquier solicitud para la sesión que no esté <br/>considerada dentro de las atenciones básicas para el tipo de actividad o alguna <br/>aclaración sobre la misma.</i></small></td></tr>
+
+ <tr><td colspan="4"><%= hidden_field 'reservation', 'applicant_ip', "value" => request.remote_ip %></td></tr>
+
+</table>
+
+<!--[eoform:reservation]-->
+
+
+<table cellspacing="10" width="450">
+  <tr align="center"><td><%= submit_tag 'Guardar cambios' %></td></tr>
+<% end %>
+  <tr align="center"><td><%= link_to 'Regresar', :action => 'show', :id=> @activity, :controller=>'activities' %></td></tr>
+  </tr>
+</table>

@@ -1,0 +1,7 @@
+<%= error_messages_for 'eventype' %>
+
+<!--[form:eventype]-->
+<p><label for="eventype_name">Name</label><br/>
+<%= text_field 'eventype', 'name'  %></p>
+<!--[eoform:eventype]-->
+

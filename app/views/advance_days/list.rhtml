@@ -1,0 +1,19 @@
+<h1>Establecer regla de anticipación</h1>
+
+<table cellpadding="5">
+  <tr>
+    <th>Los días de anticipación a validar son:</th>
+  </tr>
+  
+<% for advance_day in @advance_days %>
+  <tr>
+    <td align="center"><%=h advance_day.days %></td>
+  </tr>
+  <tr>
+    <td align="center"><%= link_to 'Cambiar', :action => 'edit', :id => advance_day %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate(@advance_days) %>
+

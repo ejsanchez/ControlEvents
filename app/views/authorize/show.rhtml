@@ -1,0 +1,22 @@
+<h1>Solicitudes <%= @title %></h1>       
+
+<table width="750">
+   <tr><td colspan="2"><hr/></td></tr> 
+<% for activity in @activities do %>
+   <tr>
+     <td><strong>Folio:    </strong><%= "    #{activity.id}"%></td>
+     <td><strong>Inicia:  </strong><%= "  #{activity.begin_date}"%></td>
+   </tr>
+   <tr>
+     <td><strong><%= ActivityType.find(activity.activity_type_id).name %></strong></td>
+     <td><i>"<%= activity.name %></i>"</td>
+   </tr>
+   <tr><td></td>
+     <td><%= activity.description %></td>
+     <td align="center"><%= link_to 'Ver detalles', :action => 'detail', :id => activity.id,:context=>"#{params[:context]}" %></td></tr>  
+   <tr><td colspan="2"><hr/></td></tr> 
+
+<% end %>
+</table>
+
+

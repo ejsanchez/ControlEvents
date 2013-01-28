@@ -1,0 +1,27 @@
+<h1 class="title">Lista de solicitudes registradas</h1>
+<table>
+<% for activity in @activities %>
+   <tr valign="top">
+     <td width="120" rowspan="2">
+       <%= ActivityType.find(activity.activity_type_id).name %></td>
+     <td>
+       <strong><i>  " <%= activity.name %> "</i></strong>
+       <i><small>(<%= "#{Activity.st_status(activity.status)}"%>)</small></i>
+     </td>
+   </tr>
+   <tr>
+     <td colspan="2"><i><small><%= activity.description %></small></i>
+     </td>
+     <td valign="bottom">
+     <% if activity.status != 3 %>
+       <%= link_to 'Entrar',:action => 'login',:controller => 'activities', :id => activity %>
+     <% else %>
+       <strong>CANCELADA</strong>
+     <% end %>
+     </td>
+   </tr>
+   <tr><td colspan="3"><hr/></td></tr>
+<% end %>
+</table>
+<!-- <%#= will_paginate @activity_pages %> -->
+

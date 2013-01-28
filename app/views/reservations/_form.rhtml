@@ -1,0 +1,52 @@
+<%= error_messages_for 'reservation' %>
+
+<!--[form:reservation]-->
+
+<table>
+<% if @context == 'new' %>
+ <tr><td colspan="4"><b>DATOS DE LA PRIMERA SESIÓN</b></td></tr>
+<% else %>
+ <tr><td colspan="4"><b>DATOS DE LA SESIÓN</b></td></tr>
+<% end %>
+ <tr><td colspan="4"><hr/></td></tr>
+
+ <tr><td><label for="reservation_start_date"><font color=red>*</font> Fecha: </label></td>
+     <td colspan="3"><%= date_field 'reservation', 'start_date', "size" => "10", "readonly"=> "readonly"%></td>
+ </tr>
+ <tr>
+     <td><label for="reservation_start_date"><font color=red>*</font> Hora de inicio: </label></td>
+     <td><%= select("reservation","start_time", Reservation::HOUR_OPTS, { :include_blank => true, :selected => nil }) %> 
+     </td>
+     <td colspan="2"><label for="reservation_end_time"><font color=red>*</font> Hora de fin:  </label>     
+       <%= select("reservation","end_time", Reservation::HOUR_OPTS, { :include_blank => true, :selected => nil })%>   
+     </td>
+  </tr>
+
+<tr><td colspan="2"><label for="reservation_num_rapporteurs"><font color=red>*</font> Número de ponentes:  </label></td><td colspan="2"><%= text_field 'reservation', 'num_rapporteurs',"size"=>3  %></td></tr>
+
+ <tr><td colspan="2"><label for="reservation_assistants_num"><font color=red>*</font> Número aproximado de asistentes:  </label></td>
+     <td colspan="2"><%= text_field 'reservation', 'assistants_num',"size"=>3  %></td></tr>
+
+ <tr><td><label for="reservation_space_id"><font color=red>*</font> Espacio deseado: </label></td>
+     <td colspan="4"><select name="reservation[space_id]">
+     <option value=0 selected="selected">--Seleccione una sala--</option> 
+
+<% for space in @spaces %>
+   <option value="<%=space.id%>"><%=space.name%> (cupo: <%=space.max_people%> personas) </option> 
+<% end %>
+  </select></td></tr>
+
+
+<!--  <td colspan="4"><%#= select 'reservation', 'space_id', @spaces %></td></tr> -->
+
+
+ <tr><td><label for="reservation_details">Observaciones: </label></td>
+     <td colspan="4"><%= text_area 'reservation', 'details', "size" => "60", "rows" => "4"%></td>
+
+ <tr><td></td><td colspan="4"><small><i>  En esta sección puede colocar cualquier especificación de la actividad.</i></small></td></tr>
+
+ <tr><td colspan="4"><%= hidden_field 'reservation', 'applicant_ip', "value" => request.remote_ip %></td></tr>
+
+</table>
+
+<!--[eoform:reservation]-->

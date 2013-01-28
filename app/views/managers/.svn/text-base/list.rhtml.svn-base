@@ -1,0 +1,33 @@
+<h1>Lista de administradores de espacios</h1>
+
+<table cellspacing = "10">
+  <tr>
+    <th>Nombre </th>
+    <th>Usuario </th>
+    <th>Rol </th>
+    <th>Ubicación </th>
+    <th>Teléfono </th>
+    <th>Correo electrónico </th>
+  </tr>
+  <tr><td colspan="5"><hr/></td></tr> 
+<% for manager in @managers %>
+  <% if manager.login != "admin"%>
+  <tr>
+    <td><%=h manager.name%></td>
+    <td><%=h manager.login%></td>
+    <td><%=h manager.role%></td>
+    <td><%=h manager.location%></td>
+    <td><%=h manager.phone%></td>
+    <td><%=h manager.email%></td>
+    <td><%= link_to 'Editar', :action => 'edit', :id => manager, :context=>'edit' %></td>
+    <td><%= link_to 'Borrar', { :action => 'destroy', :id => manager }, :confirm => 'Usted va a eliminar a este usuario, ¿Desea continuar?', :post => true %></td>
+  </tr>
+  <% end %>
+<% end %>
+
+<tr><td colspan="5"><%= will_paginate @managers %></td></tr>
+<tr align="center"><td colspan="5"><%= link_to 'Agregar usuario', :action => 'new' %></td></tr>
+</table>
+
+
+

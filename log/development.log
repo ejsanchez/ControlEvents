@@ -1,0 +1,797 @@
+# Logfile created on Fri Jan 11 09:41:06 -0600 2013/!\ FAILSAFE /!\  Fri Jan 11 10:15:10 -0600 2013
+  Status: 500 Internal Server Error
+  FATAL:  la autentificaci?n Ident fall? para el usuario <<events>>
+
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:968:in `initialize'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /usr/lib/ruby/1.8/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/1.8/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/1.8/action_controller/string_coercion.rb:25:in `call'
+    /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+    /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+    /usr/lib/ruby/1.8/action_controller/params_parser.rb:15:in `call'
+    /usr/lib/ruby/1.8/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/lib/ruby/1.8/action_controller/failsafe.rb:26:in `call'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/1.8/action_controller/dispatcher.rb:114:in `call'
+    /usr/lib/ruby/1.8/action_controller/reloader.rb:34:in `run'
+    /usr/lib/ruby/1.8/action_controller/dispatcher.rb:108:in `call'
+    /home/esanchez/ControlEvents/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:47:in `call'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `each'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `call'
+    /home/esanchez/ControlEvents/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/1.8/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/1.8/rack/handler/webrick.rb:48:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/1.8/rack/handler/webrick.rb:14:in `run'
+    /home/esanchez/ControlEvents/vendor/rails/railties/lib/commands/server.rb:111
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+/!\ FAILSAFE /!\  Fri Jan 11 10:22:10 -0600 2013
+  Status: 500 Internal Server Error
+  FATAL:  la autentificaci?n Ident fall? para el usuario <<events>>
+
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:968:in `initialize'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /usr/lib/ruby/1.8/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/1.8/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/1.8/action_controller/string_coercion.rb:25:in `call'
+    /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+    /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+    /usr/lib/ruby/1.8/action_controller/params_parser.rb:15:in `call'
+    /usr/lib/ruby/1.8/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/lib/ruby/1.8/action_controller/failsafe.rb:26:in `call'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/1.8/action_controller/dispatcher.rb:114:in `call'
+    /usr/lib/ruby/1.8/action_controller/reloader.rb:34:in `run'
+    /usr/lib/ruby/1.8/action_controller/dispatcher.rb:108:in `call'
+    /home/esanchez/ControlEvents/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:47:in `call'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `each'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `call'
+    /home/esanchez/ControlEvents/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/1.8/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/1.8/rack/handler/webrick.rb:48:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/1.8/rack/handler/webrick.rb:14:in `run'
+    /home/esanchez/ControlEvents/vendor/rails/railties/lib/commands/server.rb:111
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+/!\ FAILSAFE /!\  Fri Jan 11 10:22:29 -0600 2013
+  Status: 500 Internal Server Error
+  FATAL:  la autentificaci?n Ident fall? para el usuario <<events>>
+
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:968:in `initialize'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /usr/lib/ruby/1.8/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/1.8/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/1.8/action_controller/string_coercion.rb:25:in `call'
+    /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+    /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+    /usr/lib/ruby/1.8/action_controller/params_parser.rb:15:in `call'
+    /usr/lib/ruby/1.8/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/lib/ruby/1.8/action_controller/failsafe.rb:26:in `call'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/1.8/action_controller/dispatcher.rb:114:in `call'
+    /usr/lib/ruby/1.8/action_controller/reloader.rb:34:in `run'
+    /usr/lib/ruby/1.8/action_controller/dispatcher.rb:108:in `call'
+    /home/esanchez/ControlEvents/vendor/rails/railties/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:47:in `call'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `each'
+    /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `call'
+    /home/esanchez/ControlEvents/vendor/rails/railties/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/1.8/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/1.8/rack/handler/webrick.rb:48:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/1.8/rack/handler/webrick.rb:14:in `run'
+    /home/esanchez/ControlEvents/vendor/rails/railties/lib/commands/server.rb:111
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2013-01-11 10:45:24) [GET]
+Redirected to http://localhost:3000/consult
+Completed in 40ms (DB: 0) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ConsultController#index (for 127.0.0.1 at 2013-01-11 10:45:24) [GET]
+  [4;36;1mSpace Load (0.0ms)[0m   [0;1mPGError: ERROR: no existe la relación «spaces»
+LINE 1: SELECT * FROM "spaces" ORDER BY name
+ ^
+: SELECT * FROM "spaces" ORDER BY name[0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  no existe la relación «spaces»
+LINE 1: SELECT * FROM "spaces"  ORDER BY name
+                      ^
+: SELECT * FROM "spaces"  ORDER BY name):
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract_adapter.rb:219:in `log'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:550:in `execute'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:1037:in `select_raw'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/postgresql_adapter.rb:1024:in `select'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/query_cache.rb:81:in `cache_sql'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/query_cache.rb:60:in `select_all'
+  /usr/lib/ruby/1.8/active_record/base.rb:661:in `find_by_sql'
+  /usr/lib/ruby/1.8/active_record/base.rb:1548:in `find_every'
+  /usr/lib/ruby/1.8/active_record/base.rb:615:in `find'
+  app/controllers/consult_controller.rb:9:in `space'
+  app/controllers/consult_controller.rb:4:in `index'
+  /usr/lib/ruby/1.8/action_controller/base.rb:1331:in `send'
+  /usr/lib/ruby/1.8/action_controller/base.rb:1331:in `perform_action_without_filters'
+  /usr/lib/ruby/1.8/action_controller/filters.rb:617:in `call_filters'
+  /usr/lib/ruby/1.8/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /usr/lib/ruby/1.8/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /usr/lib/ruby/1.8/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /usr/lib/ruby/1.8/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /usr/lib/ruby/1.8/action_controller/flash.rb:146:in `perform_action'
+  /usr/lib/ruby/1.8/action_controller/base.rb:532:in `send'
+  /usr/lib/ruby/1.8/action_controller/base.rb:532:in `process_without_filters'
+  /usr/lib/ruby/1.8/action_controller/filters.rb:606:in `process'
+  /usr/lib/ruby/1.8/action_controller/base.rb:391:in `process'
+  /usr/lib/ruby/1.8/action_controller/base.rb:386:in `call'
+  /usr/lib/ruby/1.8/action_controller/routing/route_set.rb:437:in `call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:87:in `dispatch'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:121:in `_call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:29:in `call'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:29:in `call'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:9:in `cache'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:28:in `call'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /usr/lib/ruby/1.8/action_controller/string_coercion.rb:25:in `call'
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/action_controller/params_parser.rb:15:in `call'
+  /usr/lib/ruby/1.8/action_controller/session/cookie_store.rb:93:in `call'
+  /usr/lib/ruby/1.8/action_controller/failsafe.rb:26:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:114:in `call'
+  /usr/lib/ruby/1.8/action_controller/reloader.rb:34:in `run'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:108:in `call'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:47:in `call'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `each'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `call'
+  /usr/lib/ruby/1.8/rack/content_length.rb:13:in `call'
+  /usr/lib/ruby/1.8/rack/handler/webrick.rb:48:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/lib/ruby/1.8/rack/handler/webrick.rb:14:in `run'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (118.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (13.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to BaseSchema (1)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (78.6ms)[0m   [0;1mCREATE TABLE "managers" ("id" serial primary key, "first_name" character varying(255) NOT NULL, "last_name" character varying(255) NOT NULL, "maiden_name" character varying(255), "login" character varying(255), "password" character varying(255), "location" character varying(255), "phone" character varying(255) NOT NULL, "email" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "index_managers_on_login" ON "managers" ("login")[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE "activity_types" ("id" serial primary key, "name" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "index_activity_types_on_name" ON "activity_types" ("name")[0m
+  [4;36;1mSQL (9.5ms)[0m   [0;1mCREATE TABLE "activities" ("id" serial primary key, "name" character varying(255) NOT NULL, "description" character varying(255) NOT NULL, "person_reg" character varying(255), "person_responsable" character varying(255), "email_contact" character varying(255), "phone_contact" character varying(255), "activity_type_id" integer NOT NULL, "reservations_num" integer DEFAULT 1 NOT NULL, "assistants_num" integer NOT NULL, "opening" character varying(255) DEFAULT E'interno' NOT NULL, "reach" character varying(255) DEFAULT E'nacional' NOT NULL, "url" character varying(255), "password" character varying(255) NOT NULL, "status" integer DEFAULT 1, "applicant_ip" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "index_activities_on_name" ON "activities" ("name")[0m
+  [4;36;1mSQL (8.8ms)[0m   [0;1mCREATE TABLE "spaces" ("id" serial primary key, "name" character varying(255) NOT NULL, "max_people" integer NOT NULL, "location" character varying(255), "manager_id" integer NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "index_spaces_on_name" ON "spaces" ("name")[0m
+  [4;36;1mSQL (25.6ms)[0m   [0;1mCREATE TABLE "reservations" ("id" serial primary key, "activity_id" integer, "space_id" integer, "status" integer DEFAULT 1, "start_date" date NOT NULL, "end_date" date, "start_time" time, "end_time" time, "schedule" character varying(255) DEFAULT E'matutino', "details" character varying(255), "applicant_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE UNIQUE INDEX "index_reservations_on_activity_id" ON "reservations" ("activity_id", "space_id", "start_date", "schedule")[0m
+  [4;36;1mSQL (4.4ms)[0m   [0;1mCREATE TABLE "servicetypes" ("id" serial primary key, "name" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "index_servicetypes_on_name" ON "servicetypes" ("name")[0m
+  [4;36;1mSQL (8.1ms)[0m   [0;1mCREATE TABLE "services" ("id" serial primary key, "name" character varying(255) NOT NULL, "servicetype_id" integer NOT NULL, "details" character varying(255), "applicant_ip" character varying(255) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE UNIQUE INDEX "index_services_on_name" ON "services" ("name")[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mCREATE TABLE "grantings" ("id" serial primary key, "activity_type_id" integer NOT NULL, "service_id" integer NOT NULL, "applicant_ip" character varying(255) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "index_grantings_on_activity_type_id_and_service_id" ON "grantings" ("activity_type_id", "service_id")[0m
+  [4;36;1mSQL (8.7ms)[0m   [0;1mALTER TABLE spaces ADD CONSTRAINT managers_id_fkey 
+ FOREIGN KEY (manager_id) REFERENCES managers(id) ON DELETE CASCADE[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mALTER TABLE activities ADD CONSTRAINT activity_types_id_fkey 
+ FOREIGN KEY (activity_type_id) REFERENCES activity_types(id) ON DELETE CASCADE[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mALTER TABLE reservations ADD CONSTRAINT reservations_activity_id_fkey 
+ FOREIGN KEY (activity_id) REFERENCES activities(id) ON DELETE CASCADE[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mALTER TABLE reservations ADD CONSTRAINT reservations_space_id_fkey 
+ FOREIGN KEY (space_id) REFERENCES spaces(id) ON DELETE CASCADE[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mALTER TABLE services ADD CONSTRAINT servicetypes_id_fkey 
+ FOREIGN KEY (servicetype_id) REFERENCES servicetypes(id) ON DELETE CASCADE[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mALTER TABLE grantings ADD CONSTRAINT grantings_activity_type_id_fkey 
+ FOREIGN KEY (activity_type_id) REFERENCES activity_types(id) ON DELETE CASCADE[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mALTER TABLE grantings ADD CONSTRAINT grantings_service_id_fkey 
+ FOREIGN KEY (service_id) REFERENCES services(id) ON DELETE CASCADE[0m
+  [4;35;1mSQL (11.6ms)[0m   [0mALTER TABLE activities ADD CONSTRAINT activity_reservations_positive
+ CHECK (reservations_num > '0'::integer)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE activities ADD CONSTRAINT activity_assistants_positive
+ CHECK (assistants_num > '0'::integer)[0m
+  [4;35;1mSQL (19.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Migrating to CatalogData (2)
+  [4;35;1mSQL (1.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "activity_types" ("name") VALUES(E'Conferencia') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "activity_types" ("name") VALUES(E'Seminario Institucional') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "activity_types" ("name") VALUES(E'Taller') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "activity_types" ("name") VALUES(E'Diplomado') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "activity_types" ("name") VALUES(E'Mesa redonda') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "activity_types" ("name") VALUES(E'Presentación de libro') RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "activity_types" ("name") VALUES(E'Curso') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "activity_types" ("name") VALUES(E'Homenaje') RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "activity_types" ("name") VALUES(E'Entrega de premio') RETURNING "id"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "managers" ("location", "last_name", "phone", "maiden_name", "login", "password", "first_name", "email") VALUES(E'Sría.Técnica', E'Sánchez', E'56230100 ext 42489', E'Fragoso', E'admin', E'controlEvents', E'Evelyn', E'esanchez@iiec.unam.mx') RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "managers" ("location", "last_name", "phone", "maiden_name", "login", "password", "first_name", "email") VALUES(E'Difusión', E'Calleros', E'56230099', E'López', E'vcalleros', E'vcalleros', E'Verónica', E'esanchez@iiec.unam.mx') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "managers" ("location", "last_name", "phone", "maiden_name", "login", "password", "first_name", "email") VALUES(E'Secretaría Técnica', E'Tovías', E'56230157', E'García', E'atovias', E'atovias', E'Aristeo', E'esanchez@iiec.unam.mx') RETURNING "id"[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "spaces" ("name", "max_people", "location", "manager_id") VALUES(E'Auditorio Ricardo Torres Gaitán', 100, E'PBD', 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "spaces" ("name", "max_people", "location", "manager_id") VALUES(E'Sala de videoconferencias', 30, E'PBD', 1) RETURNING "id"[0m
+  [4;36;1mSQL (12.9ms)[0m   [0;1mINSERT INTO "spaces" ("name", "max_people", "location", "manager_id") VALUES(E'Sala Ángel Bassols', 40, E'PBD', 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "spaces" ("name", "max_people", "location", "manager_id") VALUES(E'Sala José Luis Ceceña', 30, E'PBD', 1) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "spaces" ("name", "max_people", "location", "manager_id") VALUES(E'Laboratorio de cómputo 1', 10, E'1PI', 2) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "spaces" ("name", "max_people", "location", "manager_id") VALUES(E'Laboratorio de cómputo 2', 25, E'1PI', 2) RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "spaces" ("name", "max_people", "location", "manager_id") VALUES(E'Aula 1', 20, E'1PD', 2) RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "spaces" ("name", "max_people", "location", "manager_id") VALUES(E'Aula 2', 20, E'1PD', 2) RETURNING "id"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "servicetypes" ("name") VALUES(E'Administrativos') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "servicetypes" ("name") VALUES(E'Técnicos') RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "servicetypes" ("name") VALUES(E'Académicos') RETURNING "id"[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Micrófonos alámbricos', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Micrófonos de solapa', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Proyector multimedia', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Laptop', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Televisión', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Reproductor de DVD', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Videocasetera VHS', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Pantalla de proyección', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Proyector de acetatos', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Proyector de transparencias', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Proyector de cuerpos opacos', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Toma de fotografías', '2008-02-21 17:32:00.000000', 2, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Mesa para registro', '2008-02-21 17:32:00.000000', 1, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Mesa para cafetería', '2008-02-21 17:32:00.000000', 1, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Agua en botella para ponentes', '2008-02-21 17:32:00.000000', 1, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Agua en jarra para ponentes', '2008-02-21 17:32:00.000000', 1, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Té para ponentes', '2008-02-21 17:32:00.000000', 1, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Servicio de cafetería', '2008-02-21 17:32:00.000000', 1, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Colocación de podium', '2008-02-21 17:32:00.000000', 1, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Servicio de limpieza', '2008-02-21 17:32:00.000000', 1, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "services" ("name", "created_at", "servicetype_id", "details", "updated_at", "applicant_ip") VALUES(E'Paño con logotipo del instituto', '2008-02-21 17:32:00.000000', 3, E'', '2008-02-21 17:32:27.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Migrating to AlterActivityTable (3)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "activities" ADD COLUMN "observations" character varying(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('3')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Migrating to CreateAreasTable (4)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "activities" ADD COLUMN "area_id" integer[0m
+  [4;36;1mSQL (7.7ms)[0m   [0;1mCREATE TABLE "areas" ("id" serial primary key, "name" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "index_areas_on_name" ON "areas" ("name")[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mALTER TABLE activities ADD CONSTRAINT area_id_fkey 
+ FOREIGN KEY (area_id) REFERENCES areas(id)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('4')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to AreasCatalog (5)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "areas" ("name") VALUES(E'Economía Mundial') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "areas" ("name") VALUES(E'Economía Industrial') RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "areas" ("name") VALUES(E'Economía del Sector Primario') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "areas" ("name") VALUES(E'Economía Urbana y Regional') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "areas" ("name") VALUES(E'Economía Aplicada') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "areas" ("name") VALUES(E'Economía del Trabajo y de la Tecnología') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "areas" ("name") VALUES(E'Historia Económica ') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "areas" ("name") VALUES(E'Economía Fiscal y Financiera') RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "areas" ("name") VALUES(E'Economía de la Educación, la Ciencia y la Tecnología') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "areas" ("name") VALUES(E'Economía del Sector Energético') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "areas" ("name") VALUES(E'Economía Política del Desarrollo') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "areas" ("name") VALUES(E'Estudios Hacendarios y del Sector Público') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "areas" ("name") VALUES(E'Economía del Conocimiento y Desarrollo') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "areas" ("name") VALUES(E'Economía y Medio Ambiente') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO "areas" ("name") VALUES(E'Departamento de Estudios Prospectivos y de coyuntura') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "areas" ("name") VALUES(E'Centro de Educación Continua') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "areas" ("name") VALUES(E'Secretaría Académica') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "areas" ("name") VALUES(E'Secretaría Técnica') RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "areas" ("name") VALUES(E'Secretaría Administrativa') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "areas" ("name") VALUES(E'Dirección') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "activity_types" ("name") VALUES(E'Videoconferencia') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "activity_types" ("name") VALUES(E'Rueda de prensa') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('5')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Migrating to AlterReservationTable (6)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "reservations" ADD COLUMN "assistants_num" integer[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mALTER TABLE "activities" DROP "assistants_num"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('6')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Migrating to RemoveActivitiesIndex (7)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mDROP INDEX "index_reservations_on_activity_id"[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE UNIQUE INDEX "reservations_defunique" ON "reservations" ("activity_id", "space_id", "start_date", "schedule", "status")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('7')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Migrating to CreateAssigmentTable (8)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCREATE TABLE "assigments" ("id" serial primary key, "space_id" integer NOT NULL, "manager_id" integer NOT NULL, "applicant_ip" character varying(255) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE UNIQUE INDEX "index_assigments_on_space_id_and_manager_id" ON "assigments" ("space_id", "manager_id")[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mALTER TABLE assigments ADD CONSTRAINT space_id_forkey 
+ FOREIGN KEY (space_id) REFERENCES spaces(id)[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mALTER TABLE assigments ADD CONSTRAINT manager_id_forkey 
+ FOREIGN KEY (manager_id) REFERENCES managers(id)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('8')[0m
+  [4;36;1mSQL (13.4ms)[0m   [0;1mCOMMIT[0m
+Migrating to AssigmentsData (9)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 1, E'132.248.72.141', 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 1, E'132.248.72.141', 2) RETURNING "id"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 1, E'132.248.72.141', 3) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 1, E'132.248.72.141', 4) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 2, E'132.248.72.141', 1) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 2, E'132.248.72.141', 2) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 2, E'132.248.72.141', 3) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 2, E'132.248.72.141', 4) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 1, E'132.248.72.141', 5) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 1, E'132.248.72.141', 6) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 1, E'132.248.72.141', 7) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 1, E'132.248.72.141', 8) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 3, E'132.248.72.141', 5) RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 3, E'132.248.72.141', 6) RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 3, E'132.248.72.141', 7) RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "assigments" ("created_at", "updated_at", "manager_id", "applicant_ip", "space_id") VALUES('2008-02-21 17:32:00.000000', '2008-02-21 17:32:27.000000', 3, E'132.248.72.141', 8) RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('9')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Migrating to MissingFields (10)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "activities" ADD COLUMN "assistants_num" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('10')[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mCOMMIT[0m
+Migrating to AlterSpaces (11)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "spaces" ADD COLUMN "organization" character varying(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('11')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Migrating to AddPublishedFlag (12)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "activities" ADD COLUMN "published" boolean[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "activities" ALTER COLUMN "published" SET DEFAULT 'f'[0m
+  [4;35;1mAddPublishedFlag::Activity Load (0.3ms)[0m   [0mSELECT * FROM "activities" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('12')[0m
+  [4;35;1mSQL (22.6ms)[0m   [0mCOMMIT[0m
+Migrating to AddFieldsActivities (13)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "activities" ADD COLUMN "participants" character varying(255)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "activities" ADD COLUMN "institutions" character varying(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('13')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddFields (14)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (8.6ms)[0m   [0;1mCREATE TABLE "suppliers" ("id" serial primary key, "first_name" character varying(255) NOT NULL, "last_name" character varying(255) NOT NULL, "maiden_name" character varying(255), "location" character varying(255), "servicetype_id" integer NOT NULL, "phone" character varying(255) NOT NULL, "email" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "index_suppliers_on_email" ON "suppliers" ("email")[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mALTER TABLE suppliers ADD CONSTRAINT service_type_id_fkey 
+ FOREIGN KEY (servicetype_id) REFERENCES servicetypes(id)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('14')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to SuppliersData (15)
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO "suppliers" ("location", "servicetype_id", "last_name", "phone", "maiden_name", "first_name", "email") VALUES(E'P1I', 2, E'Reyes', E'56230122', E'Guzmán', E'Ernesto', E'jereyes@servidor.unam.mx') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "suppliers" ("location", "servicetype_id", "last_name", "phone", "maiden_name", "first_name", "email") VALUES(E'PBD', 2, E'Cruz', E'56230100 ext. 42471', E'Barrera', E'Carlos', E'ccruz@iiec.unam.mx') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "suppliers" ("location", "servicetype_id", "last_name", "phone", "maiden_name", "first_name", "email") VALUES(E'P1D', 2, E'Rodríguez', E'56230100 ext. 42486', E'Sánchez', E'Julio', E'jrodriguez@iiec.unam.mx') RETURNING "id"[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO "suppliers" ("location", "servicetype_id", "last_name", "phone", "maiden_name", "first_name", "email") VALUES(E'P1D', 2, E'López', E'56230100 ext. 42486', E'Castillo', E'José Luis', E'jllopez@iiec.unam.mx') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "suppliers" ("location", "servicetype_id", "last_name", "phone", "maiden_name", "first_name", "email") VALUES(E'P1D', 1, E'Pedraza', E'56230143 - 144', E'Martínez', E'Alberto', E'pedrazam@iiec.unam.mx') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('15')[0m
+  [4;36;1mSQL (17.3ms)[0m   [0;1mCOMMIT[0m
+Migrating to CompleteTimes (16)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mCompleteTimes::Reservation Load (0.5ms)[0m   [0;1mSELECT * FROM "reservations" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('16')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to ChangeIndexReservations (17)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mDROP INDEX "reservations_defunique"[0m
+  [4;35;1mSQL (33.2ms)[0m   [0mCREATE UNIQUE INDEX "by_activity_key" ON "reservations" ("activity_id", "space_id", "start_date", "start_time", "end_time", "status")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('17')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Migrating to CreateHolidays (19)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (25.3ms)[0m   [0mCREATE TABLE "holidays" ("id" serial primary key, "app_date" date NOT NULL, "app_date_end" date, "applicant_ip" character varying(255) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE UNIQUE INDEX "index_holidays_on_app_date" ON "holidays" ("app_date")[0m
+  [4;35;1mSQL (7.2ms)[0m   [0mCREATE TABLE "signs" ("id" serial primary key, "activity_id" integer NOT NULL, "sign" character varying(255) NOT NULL, "applicant_ip" character varying(255) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE UNIQUE INDEX "index_signs_on_activity_id" ON "signs" ("activity_id")[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mALTER TABLE signs ADD CONSTRAINT activities_id_fkey 
+ FOREIGN KEY (activity_id) REFERENCES activities(id) ON DELETE CASCADE[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('19')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Migrating to InsertHolidays (20)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO "holidays" ("app_date_end", "created_at", "app_date", "updated_at", "applicant_ip") VALUES(NULL, '2009-01-14 00:00:00.000000', '2009-02-02', '2009-01-14 00:00:00.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO "holidays" ("app_date_end", "created_at", "app_date", "updated_at", "applicant_ip") VALUES('2009-04-10', '2009-01-14 00:00:00.000000', '2009-04-06', '2009-01-14 00:00:00.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "holidays" ("app_date_end", "created_at", "app_date", "updated_at", "applicant_ip") VALUES('2009-07-24', '2009-01-14 00:00:00.000000', '2009-07-06', '2009-01-14 00:00:00.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "holidays" ("app_date_end", "created_at", "app_date", "updated_at", "applicant_ip") VALUES(NULL, '2009-01-14 00:00:00.000000', '2009-03-16', '2009-01-14 00:00:00.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO "holidays" ("app_date_end", "created_at", "app_date", "updated_at", "applicant_ip") VALUES(NULL, '2009-01-14 00:00:00.000000', '2009-05-01', '2009-01-14 00:00:00.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "holidays" ("app_date_end", "created_at", "app_date", "updated_at", "applicant_ip") VALUES(NULL, '2009-01-14 00:00:00.000000', '2009-05-15', '2009-01-14 00:00:00.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "holidays" ("app_date_end", "created_at", "app_date", "updated_at", "applicant_ip") VALUES(NULL, '2009-01-14 00:00:00.000000', '2009-09-15', '2009-01-14 00:00:00.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "holidays" ("app_date_end", "created_at", "app_date", "updated_at", "applicant_ip") VALUES(NULL, '2009-01-14 00:00:00.000000', '2009-09-16', '2009-01-14 00:00:00.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "holidays" ("app_date_end", "created_at", "app_date", "updated_at", "applicant_ip") VALUES(NULL, '2009-01-14 00:00:00.000000', '2009-10-12', '2009-01-14 00:00:00.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO "holidays" ("app_date_end", "created_at", "app_date", "updated_at", "applicant_ip") VALUES(NULL, '2009-01-14 00:00:00.000000', '2009-11-02', '2009-01-14 00:00:00.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO "holidays" ("app_date_end", "created_at", "app_date", "updated_at", "applicant_ip") VALUES(NULL, '2009-01-14 00:00:00.000000', '2009-11-16', '2009-01-14 00:00:00.000000', E'132.248.72.141') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Migrating to AddFieldReservations (21)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "reservations" ADD COLUMN "num_rapporteurs" integer[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mALTER TABLE "reservations" ALTER COLUMN "num_rapporteurs" SET DEFAULT 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('21')[0m
+  [4;36;1mSQL (11.2ms)[0m   [0;1mCOMMIT[0m
+Migrating to ChangeStrings (22)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (31.5ms)[0m   [0;1mALTER TABLE "activities" ALTER COLUMN "description" TYPE text[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "activities" ALTER "description" SET NOT NULL[0m
+  [4;36;1mSQL (37.7ms)[0m   [0;1mALTER TABLE "activities" ALTER COLUMN "participants" TYPE text[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "activities" ALTER "participants" SET NOT NULL[0m
+  [4;36;1mSQL (37.9ms)[0m   [0;1mALTER TABLE "activities" ALTER COLUMN "institutions" TYPE text[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "activities" ALTER "institutions" SET NOT NULL[0m
+  [4;36;1mSQL (9.1ms)[0m   [0;1mALTER TABLE "reservations" ALTER COLUMN "details" TYPE text[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "reservations" ALTER "details" DROP NOT NULL[0m
+  [4;36;1mSQL (8.3ms)[0m   [0;1mALTER TABLE "services" ALTER COLUMN "details" TYPE text[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "services" ALTER "details" DROP NOT NULL[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('22')[0m
+  [4;35;1mSQL (10.4ms)[0m   [0mCOMMIT[0m
+Migrating to HistoricTables (23)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (18.5ms)[0m   [0mCREATE TABLE "advance_days" ("id" serial primary key, "days" integer NOT NULL, "applicant_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (6.1ms)[0m   [0;1mCREATE TABLE "old_activities" ("id" integer NOT NULL, "name" character varying(255), "description" text, "person_reg" character varying(255), "person_responsable" character varying(255), "email_contact" character varying(255), "phone_contact" character varying(255), "activity_type_id" integer, "reservations_num" integer DEFAULT 1, "assistants_num" integer, "opening" character varying(255) DEFAULT E'interno', "reach" character varying(255) DEFAULT E'nacional', "url" character varying(255), "password" character varying(255) NOT NULL, "status" integer DEFAULT 1, "observations" character varying(255), "area_id" integer, "published" boolean DEFAULT 'f', "participants" text, "institutions" text, "applicant_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCREATE TABLE "old_reservations" ("id" integer NOT NULL, "activity_id" integer, "space_id" integer, "status" integer DEFAULT 1, "start_date" date, "end_date" date, "start_time" time, "end_time" time, "schedule" character varying(255) DEFAULT E'matutino', "details" text, "assistants_num" integer, "num_rapporteurs" integer DEFAULT 0, "applicant_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('23')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to BakupTables (24)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBakupTables::Reservation Load (0.6ms)[0m   [0mSELECT * FROM "reservations" [0m
+  [4;36;1mBakupTables::Activity Load (0.5ms)[0m   [0;1mSELECT * FROM "activities" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('24')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Migrating to DeleteTables (25)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDeleteTables::Reservation Load (0.3ms)[0m   [0;1mSELECT * FROM "reservations" [0m
+  [4;35;1mDeleteTables::Activity Load (0.2ms)[0m   [0mSELECT * FROM "activities" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER SEQUENCE activities_id_seq RESTART 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER SEQUENCE reservations_id_seq RESTART 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('25')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Migrating to NumAssesAct (26)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "activities" ADD COLUMN "num_asses" integer[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "activities" ALTER COLUMN "num_asses" SET DEFAULT 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "old_activities" ADD COLUMN "num_asses" integer[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "old_activities" ALTER COLUMN "num_asses" SET DEFAULT 0[0m
+  [4;35;1mNumAssesAct::Activity Load (0.4ms)[0m   [0mSELECT * FROM "activities" [0m
+  [4;36;1mNumAssesAct::OldActivity Load (0.4ms)[0m   [0;1mSELECT * FROM "old_activities" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('26')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to BeginDate (27)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mALTER TABLE "activities" ADD COLUMN "begin_date" date[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "activities" ADD COLUMN "finish_date" date[0m
+  [4;36;1mBeginDate::Activity Load (0.4ms)[0m   [0;1mSELECT * FROM "activities" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('27')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddProject (28)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mALTER TABLE "activities" ADD COLUMN "project_name" character varying(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('28')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddPriority (29)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "services" ADD COLUMN "priority" integer[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('29')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddManagerRole (30)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "managers" ADD COLUMN "role" integer[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "managers" ALTER COLUMN "role" SET DEFAULT 1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "activities" ADD COLUMN "assess_date" date[0m
+  [4;35;1mAddManagerRole::Manager Load (0.3ms)[0m   [0mSELECT * FROM "managers" [0m
+  [4;36;1mAddManagerRole::Manager Update (0.4ms)[0m   [0;1mUPDATE "managers" SET "role" = 1 WHERE "id" = 1[0m
+  [4;35;1mAddManagerRole::Manager Update (0.3ms)[0m   [0mUPDATE "managers" SET "role" = 1 WHERE "id" = 2[0m
+  [4;36;1mAddManagerRole::Manager Update (0.3ms)[0m   [0;1mUPDATE "managers" SET "role" = 1 WHERE "id" = 3[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('30')[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ConsultController#index (for 127.0.0.1 at 2013-01-11 10:49:08) [GET]
+  [4;36;1mSpace Load (2.0ms)[0m   [0;1mSELECT * FROM "spaces" ORDER BY name[0m
+Rendering template within layouts/application
+Rendering consult/space
+Completed in 137ms (View: 129, DB: 2) | 200 OK [http://localhost/consult]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-01-11 10:49:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  /usr/lib/ruby/1.8/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /usr/lib/ruby/1.8/action_controller/routing/route_set.rb:441:in `recognize'
+  /usr/lib/ruby/1.8/action_controller/routing/route_set.rb:436:in `call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:87:in `dispatch'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:121:in `_call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:29:in `call'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:29:in `call'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:9:in `cache'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:28:in `call'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /usr/lib/ruby/1.8/action_controller/string_coercion.rb:25:in `call'
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/action_controller/params_parser.rb:15:in `call'
+  /usr/lib/ruby/1.8/action_controller/session/cookie_store.rb:93:in `call'
+  /usr/lib/ruby/1.8/action_controller/failsafe.rb:26:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:114:in `call'
+  /usr/lib/ruby/1.8/action_controller/reloader.rb:34:in `run'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:108:in `call'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:47:in `call'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `each'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `call'
+  /usr/lib/ruby/1.8/rack/content_length.rb:13:in `call'
+  /usr/lib/ruby/1.8/rack/handler/webrick.rb:48:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/lib/ruby/1.8/rack/handler/webrick.rb:14:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-01-11 10:49:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  /usr/lib/ruby/1.8/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /usr/lib/ruby/1.8/action_controller/routing/route_set.rb:441:in `recognize'
+  /usr/lib/ruby/1.8/action_controller/routing/route_set.rb:436:in `call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:87:in `dispatch'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:121:in `_call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:29:in `call'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:29:in `call'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:9:in `cache'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:28:in `call'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /usr/lib/ruby/1.8/action_controller/string_coercion.rb:25:in `call'
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/action_controller/params_parser.rb:15:in `call'
+  /usr/lib/ruby/1.8/action_controller/session/cookie_store.rb:93:in `call'
+  /usr/lib/ruby/1.8/action_controller/failsafe.rb:26:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:114:in `call'
+  /usr/lib/ruby/1.8/action_controller/reloader.rb:34:in `run'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:108:in `call'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:47:in `call'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `each'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `call'
+  /usr/lib/ruby/1.8/rack/content_length.rb:13:in `call'
+  /usr/lib/ruby/1.8/rack/handler/webrick.rb:48:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/lib/ruby/1.8/rack/handler/webrick.rb:14:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2013-01-28 10:02:46) [GET]
+Redirected to http://localhost:3000/consult
+Completed in 42ms (DB: 0) | 302 Found [http://localhost/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ConsultController#index (for 127.0.0.1 at 2013-01-28 10:02:46) [GET]
+  [4;36;1mSpace Load (77.7ms)[0m   [0;1mSELECT * FROM "spaces" ORDER BY name[0m
+Rendering template within layouts/application
+Rendering consult/space
+Completed in 350ms (View: 243, DB: 78) | 200 OK [http://localhost/consult]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2013-01-28 10:02:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/favicon.ico" with {:method=>:get}):
+  /usr/lib/ruby/1.8/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /usr/lib/ruby/1.8/action_controller/routing/route_set.rb:441:in `recognize'
+  /usr/lib/ruby/1.8/action_controller/routing/route_set.rb:436:in `call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:87:in `dispatch'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:121:in `_call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:29:in `call'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:29:in `call'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:9:in `cache'
+  /usr/lib/ruby/1.8/active_record/query_cache.rb:28:in `call'
+  /usr/lib/ruby/1.8/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /usr/lib/ruby/1.8/action_controller/string_coercion.rb:25:in `call'
+  /usr/lib/ruby/1.8/rack/head.rb:9:in `call'
+  /usr/lib/ruby/1.8/rack/methodoverride.rb:24:in `call'
+  /usr/lib/ruby/1.8/action_controller/params_parser.rb:15:in `call'
+  /usr/lib/ruby/1.8/action_controller/session/cookie_store.rb:93:in `call'
+  /usr/lib/ruby/1.8/action_controller/failsafe.rb:26:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `synchronize'
+  /usr/lib/ruby/1.8/rack/lock.rb:11:in `call'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:114:in `call'
+  /usr/lib/ruby/1.8/action_controller/reloader.rb:34:in `run'
+  /usr/lib/ruby/1.8/action_controller/dispatcher.rb:108:in `call'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:47:in `call'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `each'
+  /usr/lib/ruby/1.8/rack/urlmap.rb:41:in `call'
+  /usr/lib/ruby/1.8/rack/content_length.rb:13:in `call'
+  /usr/lib/ruby/1.8/rack/handler/webrick.rb:48:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  /usr/lib/ruby/1.8/rack/handler/webrick.rb:14:in `run'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ConsultController#select_month (for 127.0.0.1 at 2013-01-28 10:02:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSpace Load (39.5ms)[0m   [0mSELECT * FROM "spaces" WHERE ("spaces"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering consult/select_month
+Completed in 69ms (View: 19, DB: 40) | 200 OK [http://localhost/consult/select_month/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ConsultController#search (for 127.0.0.1 at 2013-01-28 10:02:51) [GET]
+  Parameters: {"nmonth"=>"Noviembre", "month"=>"11", "id"=>"1"}
+  [4;36;1mSpace Load (0.6ms)[0m   [0;1mSELECT * FROM "spaces" WHERE ("spaces"."id" = 1) [0m
+  [4;35;1mReservation Load (23.6ms)[0m   [0mSELECT * FROM "reservations" WHERE (space_id = E'1' AND status = 2 AND start_date >= E'2013-11-01' AND start_date < E'2013-12-01') ORDER BY start_date, schedule,activity_id[0m
+Redirected to http://localhost:3000/consult/select_month/1
+Completed in 103ms (DB: 24) | 302 Found [http://localhost/consult/search/1?month=11&nmonth=Noviembre]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ConsultController#select_month (for 127.0.0.1 at 2013-01-28 10:02:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSpace Load (0.7ms)[0m   [0;1mSELECT * FROM "spaces" WHERE ("spaces"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering consult/select_month
+Completed in 25ms (View: 13, DB: 1) | 200 OK [http://localhost/consult/select_month/1]

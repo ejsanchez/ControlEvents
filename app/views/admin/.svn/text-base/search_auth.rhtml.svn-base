@@ -1,0 +1,29 @@
+<div id="titulo">
+<h1>Actualización del calendario</h1>
+</div>
+<h2>Instrucciones</h2>
+<ol>
+ <li>La siguiente información debe ser guardada en un archivo con extensión .csv, para hacerlo seleccione TODOS los datos y copie, pegue en un editor de texto plano en su computadora. </li>
+  <li>Guarde el archivo a través de la opción Guarda como y coloque la extensión .csv. Ej."actividades.csv"</li>
+ <li>Recuerde que el archivo tiene una estructura estricta, y que cualquier cambio puede atentar contra el funcionamiento del calendario.</li>
+ <li>Debe añadir los datos al calendario activo usando como entrada de datos el archivo que acaba de generar. </li>
+</ol>
+<h2>Contenido del archivo</h2>
+<small>
+<table cellspacing="5">
+ <tr><td><b>Subject,Start Date,Start Time,End Date,End Time,Location,Description</b></td></tr>
+ <% for activity in @activities %>
+   <% res = Activity.act_reservations(activity.id) %> 
+   <% @count = 0  %>
+   <% for item in res %>   
+     <% @count = @count + 1  %>
+     <% sd = "#{item.start_date.strftime("%d")}/#{item.start_date.strftime("%m")}/#{item.start_date.strftime("%Y")}" %>
+     <% ed = sd %>
+     <% st = item.start_time.strftime("%H:%M") %>
+     <% et = item.end_time.strftime("%H:%M") %>
+     <% sp = Space.find(item.space_id).name %>
+     <tr><td><%= "#{activity.name.gsub(/[\,]/, ' ')} sesión #{@count},#{sd},#{st},#{ed},#{et},#{sp},#{activity.description.gsub(/[\,]/, ' ')}" %></td></tr>
+   <% end %>
+ <% end %>
+</table>
+</small>

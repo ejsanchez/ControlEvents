@@ -1,0 +1,30 @@
+<h1>Catálogo de espacios</h1>
+
+<table cellspacing="10">
+  <tr>
+    <th>Nombre</th>
+    <th>Capacidad<br/>(personas)</th>
+    <th>Ubicación</th>
+    <th>Acomodo</th>
+    <th>Administrador</th>
+  </tr>
+  <tr><td colspan="5"><hr/></td></tr>   
+<% for space in @spaces %>
+  <tr>
+    <td><%=h space.name %></td>
+    <td align="center"><%=h space.max_people %></td>
+    <td align="center"><%=h space.location %></td>
+    <td align="center"><%=h space.organization %></td>
+    <td><%=h Manager.find(Space.manager(space.id)).name %></td>
+
+    <td><%= link_to 'Editar', :action => 'edit', :id => space, :context =>'edit' %></td>
+    <td><%= link_to 'Borrar', { :action => 'destroy', :id => space }, :confirm => 'Va a borrar este espacio, ¿desea continuar?', :post => true %></td>
+  </tr>
+<% end %>
+  <tr align="center">
+    <td colspan="5"><%= will_paginate @spaces %></td>
+  </tr>
+<tr align="center">
+<td colspan="5"><%= link_to 'Agregar un espacio', :action => 'new' %></td>
+</tr>
+</table>

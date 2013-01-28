@@ -1,0 +1,38 @@
+<%= error_messages_for 'assigment' %>
+
+<h3>Reasignación de administrador</h3>
+
+<!--[form:assigment]-->
+
+<% form_for :assigment, @assigment, :url=> {:action => 'update', :id => @assigment} do |f|%>
+
+<table cellspacing="10">
+<tr>
+<td><label for="assigment_space_id"><font color="red"></font>Espacio: </label></td>
+<td><%= Space.find(@assigment.space_id).name %></td>
+</tr>
+<tr>
+<td><label for="assigment_manager_id"><font color="red">*</font>Administrador: </label></td>
+
+<% if params[:context] == 'edit' %>
+   <td><%= Manager.find(Space.manager(@space.id)).name %></td>
+<% else %>
+   <td><%= select 'assigment', 'manager_id', Manager.find(:all,:conditions=>["login <> 'admin'"]).collect {|m|[m.name, m.id]}%></td>
+<% end %>
+
+<td><%= hidden_field 'assigment', 'applicant_ip', "value" => request.remote_ip %></td>
+</tr>
+</table>
+
+  <p><font color=red>(*) Los campos marcados son de llenado obligatorio.</font> </p>
+
+<table cellspacing="10" width ="380">
+ <tr align="center">
+  <td colspan="2"><%= submit_tag "Guardar cambios" %></td></tr>
+ <tr align="center">
+  <td colspan="2"><%= link_to 'Regresar', :action => 'change' %>  </td>
+ </tr>
+</table>
+
+<% end %>
+<!--[eoform:space]-->

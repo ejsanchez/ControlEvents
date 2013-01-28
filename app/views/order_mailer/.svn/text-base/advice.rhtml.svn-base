@@ -1,0 +1,12 @@
+<% @manager = Manager.find(:first,:conditions=>"login='admin'")%>
+Buen día <%= @manager.first_name %> <%= @manager.last_name %> <%= @manager.maiden_name %>
+
+Le ha sido enviado un comentario desde el buzón de sugerencias del sitio de actividades académicas del IIEc-UNAM:
+
+Se le solicita revisarla para que inicie con las acciones derivadas de la misma según lo crea necesario.
+
+El mensaje es el siguiente:
+
+ <%= @cont %>
+
+Este mensaje fué enviado por <%=h "#{@name}" %> a quien puede contactar en la dirección <%=h "#{@email}" %> o al teléfono <%=h "#{@phone}" %>

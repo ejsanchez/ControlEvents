@@ -1,0 +1,23 @@
+<h1>Unidades de Investigación y Áreas</h1>
+
+<table cellspacing="10">
+  <tr>
+    <th>Unidad o Área</th>
+  </tr>
+  <tr><td><hr/></td></tr>   
+ 
+<% for area in @areas %>
+  <tr>
+    <td><%=h area.name %></td>
+    <td><%= link_to 'Editar', :action => 'edit', :id => area %></td>
+    <td><%= link_to 'Borrar', { :action => 'destroy', :id => area }, :confirm => 'Va a eliminar esta área de la lista, ¿desea continuar?', :post => true %></td>
+  </tr>
+<% end %>
+
+<tr align="center">
+<td><%= will_paginate(@areas) %> </td>
+</tr>
+<tr align="center">
+<td><%= link_to 'Agregar una unidad', :action => 'new' %></td>
+</tr>
+</table>

@@ -1,0 +1,33 @@
+Buen día.
+
+Se le notifaca que la siguiente actividad ha sido modificada, por lo que a pesar de haber sido autorizada, 
+será revisada nuevamente, y en lo posterior se le enviará la nueva orden de trabajo.
+
+DATOS DE LA ACTIVIDAD
+
+  Título: <%= @activity.name %>
+  Descripción: <%= @activity.description %>
+  Participantes: <%= @activity.participants %>
+  Instituciones que colaboran: <%= @activity.institutions %>
+  Tipo de actividad: <%= ActivityType.find(@activity.activity_type_id).name %>
+  Dirigido a: <% if @activity.opening == "abierto" %>Público en general<% else %>Sólo público con invitación<% end %>
+  Alcance: <%= @activity.reach %>
+  Académico responsable: <%= @activity.person_responsable %>
+  Teléfono: <%= @activity.phone_contact %>
+
+Las sesiones CANCELADAS para esta actividad son:
+
+DATOS DE LAS SESIONES <% counter=0 %><% @res = Reservation.find(:all,
+                         :conditions => ["activity_id = ? and status = 3",@activity.id], :order => "start_date")%>
+
+<% for item in @res do %>
+  <% if item != nil %>
+  Sesión <%= counter+=1 %>:
+     Fecha: <%= item[:start_date] %>
+     Horario: <%= item[:start_time].strftime("%H:%M") %> - <%= item[:end_time].strftime("%H:%M") %>
+     Número aproximado de asistentes: <%= item[:assistants_num] %>
+     Espacio solicitado : <%= Space.find(item[:space_id]).name %>
+  <% end %>
+<% end %>  
+
+Si tuviera alguna duda con respecto de estos datos, se le ruega ponerse en contacto con el responsable de la misma.

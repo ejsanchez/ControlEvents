@@ -1,0 +1,31 @@
+<h1>Otorgamiento de servicios</h1>
+
+<p>El otorgamiento de servicios se hace por tipo de actividad y se refiere a los servicios que se le darán de manera asegurada y sin necesidad de solicitud a las actividades debidamente solicitadas y autorizadas.</p>
+
+<table cellspacing="2" cellpadding="2">
+  <tr>
+    <th>Tipo de actividad</th>
+    <th>Servicios otorgados</th>
+  </tr>
+
+<% @actype = 0  %>
+<% for granting in @grantings %>
+ <% if granting.activity_type_id == @actype %>
+    <tr><td></td>
+        <td><%= Service.find(granting.service_id).name %></td>
+ <% else %>
+    </td></tr>
+    <% @actype = granting.activity_type_id %>
+    <tr><td colspan = "2"><hr/></td></tr>
+    <tr><td><%= ActivityType.find(granting.activity_type_id).name %></td>
+        <td><%= Service.find(granting.service_id).name %></td>
+ <% end %>
+        <td><%= link_to 'Eliminar', { :action => 'destroy', :id => granting }, :confirm => '¿Está seguro de eliminar este servicio para la actividad?', :post => true %></td>
+    </tr>
+<% end %>
+    <tr><td colspan = "2"><hr/></td></tr>
+    <tr align="center">
+      <td colspan = "2"><%= will_paginate @grantings %></td>
+    </tr>
+    <tr align="center"><td colspan = "2"><%= link_to 'Nuevo otorgamiento', :action => 'new' %></td></tr>
+</table>

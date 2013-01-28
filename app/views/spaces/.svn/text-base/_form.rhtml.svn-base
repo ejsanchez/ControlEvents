@@ -1,0 +1,36 @@
+<%= error_messages_for 'space' %>
+
+<table cellspacing="10">
+
+<!--[form:space]-->
+
+<tr>
+<td><label for="space_name"><font color="red">*</font>Nombre: </label></td>
+<td><%= text_field 'space', 'name'  %></td>
+</tr>
+<tr>
+<td><label for="space_max_people"><font color="red">*</font>Capacidad: <br/> (personas)</label></td>
+<td><%= text_field 'space', 'max_people'  %></td>
+</tr>
+<tr>
+<td><label for="space_location"><font color="red">*</font>Ubicación: </label></td>
+<td><%= text_field 'space', 'location'  %></td>
+</tr>
+<tr>
+<td><label for="space_organization"><font color="red">*</font>Acomodo: </label></td>
+<td><%= text_field 'space', 'organization' %></td>
+</tr>
+
+<tr>
+<td><label for="space_location"><font color="red"></font>Administrador: </label></td>
+<% if params[:context] == 'edit' %>
+   <td><%= Manager.find(Space.manager(@space.id)).name %></td>
+<% else %>
+   <td><%= select 'assigment', 'manager_id', Manager.find(:all,:conditions=>["login <> 'admin'"]).collect {|m|[m.name, m.id]}%></td>
+<% end %>
+
+<td><%= hidden_field 'assigment', 'applicant_ip', "value" => request.remote_ip %></td>
+</tr>
+<!--[eoform:space]-->
+
+</table>

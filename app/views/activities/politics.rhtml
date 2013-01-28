@@ -1,0 +1,133 @@
+﻿<h1>Políticas de reservación de salas</h1>
+
+<table>
+  <tr><td><h4>Propósito</h4><p>Facilitar el proceso de reservación y asignación de las diferentes salas de usos múltiples del Instituto, a fin de proporcionar un espacio adecuado para llevar a cabo las actividades académicas que se organicen en el IIEc.</p>
+<p>Promover el uso adecuado y conservación de las instalaciones, brindando siempre los servicios necesarios para cada una de las actividades.</p>
+  </td></tr>
+
+  <tr><td><h4>Disponibilidad de salas  </h4><p>Las salas con las que cuenta el Instituto para la organización de actividades académicas son:</p>
+  </td></tr>
+<tr></tr>
+<tr><td>
+<table align="center" border="1">
+       <th>Espacio(s)</th>
+       <th>Capacidad<br/>(personas)</th>
+       <th>Localización</th>
+       <th>Acomodo</th>
+       <th>Administrador</th>
+
+<% for space in @spaces  do %>
+   <% admor = Manager.find(Assigment.find(:first,:conditions=>["space_id=? and manager_id <> ?",space.id,@admin_id]).manager_id)%>
+   <tr>
+       <td><%= space.name %></td>
+       <td align="center"><%= space.max_people %></td>
+       <td align="center"><%= space.location %></td>
+       <td align="center"><%= space.organization %></td>
+       <td><%= admor.first_name %> <%= admor.last_name %> <%= admor.maiden_name %></td>
+   </tr>
+<% end %>
+      </td>
+   </tr>
+</table>
+</td></tr>
+<tr><td><p>La programación de actividades autorizadas puede ser consultada en línea, por lo que con base a esta se puede conocer la disponibilidad de espacios.</p></td></tr>
+<tr><td><p>En la asignación de las aulas 1 y 2 tendrán prioridad los miembros del IIEc que imparten cursos de los posgrados en Economía y Estudios Latinoamericanos.</p></td></tr>
+
+  <tr><td><h4>Derechos y responsabilidades de los usuarios</h4><h5>Derechos</h5>
+  <ul>
+    <li>Ser atendido cordialmente.</li>
+    <li>Recibir las instalaciones y el equipo acordado en buen estado.</li>
+    <li>Que se le proporcionen a la actividad los servicios garantizados según la modalidad de la que se trate respetando el <%= link_to 'catálogo', :action=>'catalog',:controller=>'activity_types'%>.</li>
+    <li>Contar con apoyo técnico del personal para satisfacer las solicitudes de su actividad.</li>
+    <li>Ser notificado de cualquier cambio que sufra la solicitud durante el proceso de reservación.</li>
+  </ul>
+  <h5>Responsabilidades</h5>
+  <ul>
+    <li>Conocer y respetar las políticas de reservación y uso de los espacios físicos del Instituto.</li>
+    <li>Solicitar el espacio y el equipo necesario para la actividad con la anticipación suficiente.</li>
+    <li>Aclarar cualquier precisión sobre los servicios que se solicita en la sección correspondiente para ello.</li>
+    <li>Confirmar a tiempo la asistencia de los conferencistas, ponentes,panelistas, etc. invitados a la actividad.</li>
+    <li>Hacer buen uso de las instalaciones.</li>
+    <li>Cuidar el material y equipo proporcionado para la actividad.</li>
+    <li>Seguir las instrucciones de uso del equipo brindadas por el personal técnico.</li>
+  </ul></td></tr>
+
+
+  <tr><td><h4>Políticas para la reservación de salas</h4>
+<ol>
+<li>Para ofrecer un mejor servicio la solicitud de salas debe hacerse con un mínimo de tres días hábiles de anticipación, así se podrán programar con tiempo el equipo y servicios requeridos; también es el plazo mínimo para solicitar cambios en los requerimientos. La cancelación de una solicitud  deberá realizarse con un mínimo de 24 horas de anticipación.</li>
+
+<li>Las salas están destinadas únicamente para actividades del IIEc y de su personal académico, siempre y cuando correspondan a actividades relacionadas con el programa de investigación del solicitante quien debe estar presente durante el desarrollo de la actividad. </li>
+
+<li>Cuando el número de asistentes sea menor a 10 personas las reuniones cerradas deberán realizarse en las salas de trabajo de las Unidades de Investigación. </li>
+
+<li>No se autorizará el uso de las salas de cómputo ni de la planta baja para actividades de docencia. </li>
+
+<li>El Departamento de Difusión es el responsable del préstamo de la sala de videoconferencias, pero su uso estará sujeto a la autorización de la Secretaría Académica. </li>
+
+<li>La colocación del mobiliario de las salas está establecido en  el cuadro del apartado de <i>Disponibilidad de salas</i>, en cualquier caso, las salas deberán dejarse como se encontraron. </li>
+
+<li>Por razones técnicas y de equipo, sólo podrán programarse dos actividades por día, por lo que no se prestarán más de dos salas en una misma fecha. </li>
+
+<li>Por ningún motivo se permite la introducción de alimentos o bebidas (excepto agua o café  para los ponentes en el auditorio). </li>
+
+<li>Se debe respetar el tiempo asignado para la actividad, de tal forma que no se  puede iniciar antes ni exceder la hora de término asignada. </li>
+
+<li>Las solicitudes pueden tener tres diferentes estatus en el proceso de reservación: <ul>
+<li><b>En revisión</b>.- Tiene este estatus al ser registrada y mientras no sea autorizada por el administrador del espacio que se solicita. </li>
+<li><b>Autorizada</b>.- Tendrá este estatus al ser revisada y autorizada por el administrador del espacio. </li>
+<li><b>Cancelada</b>.- Cuando la actividad sea cancelada por el académico responsable o rechazada por el administrador del espacio. </li></ul></li>
+
+<li>Al registrar cada actividad el sistema pide al solicitante establecer una contraseña, la cual se requerirá para hacer cualquier modificación a la solicitud. </li>
+
+<li>Las actividades cuentan con un conjunto de servicios garantizados los cuales dependen del tipo de actividad de que se trate (conferencia, seminario, etc.). El catálogo de servicios puede consultarse en la página de reservación de salas. </li>
+
+<li>Si la sesión que se registra tuviera un requerimiento específico deberá  detallarse en la sección de “observaciones” de la forma de registro de sesiones; por ejemplo, que la actividad tenga más de una sesión o si requiere mesa para el registro de asistentes, etcétera. </li>
+
+<li>Si requiere modificar el horario, la fecha o la sala en alguna sesión de la actividad, no podrá hacerlo directamente, deberá cancelar la sesión actual y registrar una nueva sesión. </li>
+
+<li>Cuando una solicitud autorizada sufra algún cambio, la autorización será revocada y se revisará otra vez por el administrador del espacio. </li>
+
+<li>Cuando se cancela una actividad, de forma automática se cancelan todas la sesiones que la integran, pero si se cancela sólo una sesión, el resto conserva su vigencia. </li>
+
+<li>Los datos que describen la actividad sólo se podrán modificar mientras ésta no haya sido autorizada. </li>
+
+<li>Si se requiere hacer un ensayo de la actividad programada, deberá acordar fecha y hora del ensayo con el administrador de la sala asignada. </li>
+
+<li>Los días viernes no se prestan salas, sin excepción. </li>
+
+<li>En general, no se videograbarán las actividades realizadas en ninguna de las salas. </li>
+</ol>
+
+<h4>Otras cuestiones importantes</h4>
+
+<ol>
+<li>Las actividades se transmitirán por internet sólo cuando el coordinador de dicha actividad lo autorice. </li>
+
+<li>La entrega de la información para la elaboración del material de difusión debe realizarse por lo menos con tres semanas de anticipación, de otra forma el Departamento de Difusión no podrá garantizar la difusión en la Gaceta-UNAM ni en la Agenda de la Coordinación de Humanidades. La difusión se limitará al envío de correos electrónicos. </li>
+
+<li>Se elaborarán constancias de ponentes y moderadores sólo para los seminarios, talleres, conferencias y actividades abiertas a todo público. </li>
+
+<li>El Departamento de Difusión no se hace responsable de la elaboración de constancias cuando los responsables de las actividades no entreguen los nombres de sus participantes con una semana, como mínimo, de anticipación. </li>
+
+<li>Se elaborarán constancias para comité organizador o coordinadores de seminarios anuales cuando se trate de actividades abiertas con tres sesiones o más. </li>
+
+<li>Cuando las Unidades de Investigación soliciten la elaboración de cartas-constancia por la asistencia a talleres internos, organizados por ellas mismas, éstas serán autorizadas y firmadas por  la Secretaría Académica. </li>
+
+</ol>
+</td></tr>
+  
+<tr><td><h4>Proceso de reservación electrónica</h4>
+  <p>El proceso de reservación electrónica consiste en los siguientes pasos:</p>
+  <ol>
+    <li>El académico del IIEc responsable de la actividad deberá registrar su solicitud de reservación en la página http://aulas.iiec.unam.mx, proporcionando los datos generales que se le solicitan sobre la primera sesión de la actividad. En el paso 2 podrá agregar sesiones.</li>
+    <li>El académico responsable debe confirmar los datos de la solicitud, en este paso podrá agregar sesiones y/o corregir los datos recién capturados.</li>
+    <li>Una vez que se ha registrado la solicitud el académico responsable recibirá una confirmación de registro vía correo electrónico donde se indica el número de folio de la solicitud, la contraseña de la actividad con la que podrá realizar cambios y los detalles de la actividad. Recibir este correo significa que la solicitud está registrada y ha sido recibida por el administrador del espacio requerido.</li>
+    <li>El administrador del espacio tiene la responsabilidad de revisar los detalles de cada solicitud registrada y autorizarla; si hay alguna observación el administrador contactará al académico responsable de la actividad para que las dudas sean aclaradas. </li>
+    <li>Cuando el administrador verifique los detalles la solicitud y determine si su atención es factible, procederá a autorizar la solicitud; el académico responsable de la actividad será notificado vía correo electrónico y la actividad se registrará en el calendario de actividades que aparece en al página de reservación de salas.</li>
+    <li>Al autorizarse la solicitud se genera una orden de trabajo con un número de folio para las áreas de servicios administrativos y técnicos, la cual es entregada vía correo electrónico a los responsables de dichas áreas para que sea atendida en tiempo y forma.</li>
+    <li>En caso de que una actividad fuese modificada se reenviará la orden de trabajo con los cambios, a las instancias correspondientes.</li>
+  </ol>
+  </td></tr>
+</table>
+

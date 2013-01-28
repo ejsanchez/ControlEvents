@@ -1,0 +1,30 @@
+<div id="titulo">
+Actividades de administración del sitio
+</div>
+<div>
+<table cellspacing="10">
+ <tr>
+  <td>
+  <p><%= link_to "Otorgamiento de servicios a tipo de actividad", :action => 'list', :controller=>'grantings'%></p>
+  <p><%= link_to "Reasignación de responsables para espacios", :action => 'change', :controller=>'assigments'%></p>
+  <p><%= link_to "Administración de actividades", :action => 'index', :controller=>'authorize'%></p>
+  <p>Mantenimiento de catálogos</p>
+  <ul>
+  <li><%= link_to "Usuarios (administradores de espacios)", :action => 'list', :controller=>'managers'%></li>
+  <li><%= link_to "Responsables de servicios", :action => 'index', :controller=>'suppliers'%></li>
+  <li><%= link_to "Días inhábiles", :action => 'index', :controller=>'holidays'%></li>
+  <li><%= link_to "Espacios", :action => 'index', :controller=>'spaces'%></li>
+  <li><%= link_to "Servicios", :action => 'index', :controller=>'services'%></li>
+  <li><%= link_to "Unidades y areas", :action => 'list', :controller=>'areas'%></li>
+  <li><%= link_to "Tipos de actividad", :action => 'list', :controller=>'activity_types'%></li>
+  </ul>
+  <p>Mantenimiento del calendario</p>
+  <ul>
+  <li><%= link_to "Obtener archivo para calendario", :action => 'search_auth'%></li>
+  <li><%= link_to "Registrar días inhábiles en el calendario", :action => 'search_days'%></li>
+  </ul>
+<!--  <li><%= link_to "Salir", :action => 'logout', :controller=>'login'%></li> -->
+  </td>
+ </tr> 
+</table>
+</div>

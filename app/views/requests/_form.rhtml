@@ -1,0 +1,13 @@
+<%= error_messages_for 'request' %>
+
+<!--[form:request]-->
+<p><label for="request_details">Details</label><br/>
+<%= text_field 'request', 'details'  %></p>
+
+<p><label for="request_created_at">Created at</label><br/>
+<%= datetime_select 'request', 'created_at'  %></p>
+
+<p><label for="request_updated_at">Updated at</label><br/>
+<%= datetime_select 'request', 'updated_at'  %></p>
+<!--[eoform:request]-->
+

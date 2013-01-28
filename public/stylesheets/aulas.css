@@ -1,0 +1,85 @@
+.block-menu { 
+    font-size: 92%;
+}
+
+#topnav .loginlink { float: none; text-align: right; }
+
+#squeeze { 
+    margin-left: 185px; 
+    padding-left: 15px; 
+}
+
+#container { padding-top: 1.5em; }
+#main {
+    min-height: 250px;
+    float: none;
+}
+
+#content { padding-top: 5px; }
+
+table { 
+    border-collapse: collapse;
+    margin: 1em;
+}
+
+td, th {  
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+    text-align: left;
+}
+
+/* Errores, mensajes y similares */
+
+#flash {  
+       display: block;
+       font-size: 11px;
+       margin: 0.1cm auto;
+       padding: 0.2em;
+       text-align: center;
+       width: 70%;
+}
+
+ .error { color: #f00; background-color: #ffd; border: solid #f00 2px;}
+
+ .message, .notice, .warning {   color: #000; background-color: #eee; border: solid #000 2px;}
+
+/* Detalles de listas en td paralelo */
+
+#ajtarget {
+       padding: 0.2em;
+       margin-left: auto;
+       margin-right: auto;
+       margin-top: 0.1cm;
+       margin-bottom: 0.1cm;
+       text-align: left;
+       font-size: 14px;
+       display: block; 
+       color: #000; 
+       background-color: #eee;
+}
+
+/* Solicitud de login */
+
+#loginreq {  
+        background-color: #eee;
+        border: solid #6380AA 1px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+	margin-top: 3em;
+	margin-bottom: 7em;
+        padding: 0.5cm;
+        text-align: center;
+        width: 35%;
+}
+
+/* Formato de lista de reporte*/
+#report {  
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+	margin-top: 3em;
+	margin-bottom: 7em;
+        padding: 0.5cm;
+        font-size: 9px;
+}

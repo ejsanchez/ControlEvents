@@ -1,0 +1,86 @@
+    <h2>Solicitud con folio No.<%= @activity.id %></h2>
+    <h2>Estatus: <%= Activity.st_status(@activity.status) %></h2> 
+<table width="750">
+   <tr>
+     <td align="rigth" colspan="5">
+     <% if @activity.status == 1 %>
+         <%= link_to 'Autorizar', {:action => 'assess', :id => @activity.id}, :confirm => 'Va a autorizar esta actividad ¿Ya cuenta con la aprobación del secretario correspondiente?', :post => true  %> |
+     <% end %>
+     <% if @activity.status < 3 %>
+     <%= link_to 'Cancelar', :action => 'pre_cancel', :controller=> 'activities',
+               :id => @activity.id,:context=>"#{params[:context]}" %>  |
+     <%= link_to 'Ver orden de trabajo', :action=> 'pdf', :controller=>'notifier', :id=> @activity.id%>  |
+     <% end %>
+     <%= link_to 'Regresar a la lista', :action => 'show', :context=>@context %>
+     </td>
+   </tr>
+   <tr><td colspan="5"><hr/></td></tr> 
+
+   <tr>
+     <td><strong><%= ActivityType.find(@activity.activity_type_id).name %></strong></td>
+     <td colspan="3"><i>"<%= @activity.name %></i>"</td>
+   </tr>
+   <tr><td colspan="5"><hr/></td></tr> 
+
+   <tr><td>Descripción:</td>
+     <td colspan="4"><%= @activity.description %></td>
+   </tr>
+   <tr><td>Responsable:</td>
+     <td colspan="2"> <%= @activity.person_responsable %></td>
+     <td colspan="2"> Tel : <%= @activity.phone_contact %><br/>  
+                      email : <%= @activity.email_contact %></td>
+   </tr>
+
+  <% if @activity.project_name != nil and @activity.project_name != ""%>
+   <tr><td>Proyecto de <br/>investigación:</td>
+     <td colspan="2"><%= @activity.project_name %></td>
+   </tr>
+  <% end %>
+
+  <% if @activity.participants != nil and @activity.participants != ""%>
+   <tr><td valign="center">Participantes:</td>
+     <td colspan="4" valign="top"><%= line_format((@activity.participants).to_s) %></td></tr>
+  <% end %>
+
+  <% if @activity.institutions != nil and @activity.institutions != ""%>
+   <tr><td valign="center">Instituciones que<br/>colaboran:</td>
+     <td colspan="4" valign="top"><%= line_format((@activity.institutions).to_s) %></td></tr>
+  <% end %>
+
+   <% if @activity.status == 3 %>
+   <tr><td>Cancelada por: </td>
+       <td colspan="4"><%= @activity.observations %></td>
+   </tr>  
+   <% end %>
+
+
+   <tr><td colspan="5">Descripción de las sesiones solicitadas:</td>
+   <% count=0 %>
+   <% if @activity.status == 3%>
+     <% reservations= Activity.reservations(@activity.id) %>
+   <% else %>
+     <% reservations= Activity.act_reservations(@activity.id) %>
+   <% end %>
+     <% reservations.each do |res| %>
+     <% if res.status == 3 %>
+      <tr><td align="right"><small><i><font color="#8A4B08">cancelada</font></i></small></td>
+     <% else %>
+     <% count=count+1 %>
+        <tr><td align="right">sesión <%=count%>:</td>
+     <% end %>
+        <td><b><%= res.start_date %></b></td>
+        <td>Horario : <%= res.start_time.strftime("%H:%M") %> - <%= res.end_time.strftime("%H:%M") %></td>
+     </tr>
+     <tr><td></td>
+        <td colspan="4">Sala: <%= Space.find(res.space_id).name %></td></tr>
+     <tr><td></td>
+     <% if res.details == nil or res.details == "" %>
+        <td colspan="4"></td>
+     <% else %>
+        <td colspan="4">Detalles : <%= res.details %></td>
+     <% end %>
+   <% end %>
+
+</table>
+
+

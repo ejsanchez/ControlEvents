@@ -1,0 +1,10 @@
+<%= error_messages_for 'area' %>
+
+<!--[form:area]-->
+
+<p><label for="area_name"><font color="red">*</font>Nombre de la unidad o área:</label>
+
+<%= text_field 'area', 'name'  %></p>
+
+<!--[eoform:area]-->
+

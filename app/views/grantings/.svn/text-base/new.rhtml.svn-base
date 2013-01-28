@@ -1,0 +1,12 @@
+<h1>Nuevo otorgamiento de servicios</h1>
+
+<% form_for :granting, @granting, :url => {:action => "create"} do |f| %>
+  <%= render :partial => 'form' %>
+
+<table cellspacing="10">
+  <tr><td colspan="2"><font color=red>(*) Los campos marcados son de llenado obligatorio.</font> </td></tr>
+  <tr align="center">
+  <td colspan="2"><%= submit_tag "Agregar" %></td></tr>
+<% end %>
+  <tr align="center"><td colspan="2"><%= link_to 'Regresar', :action => 'list'%></td></tr>
+</table>

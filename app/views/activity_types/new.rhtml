@@ -1,0 +1,11 @@
+<h1>Agregar tipo de actividad</h1>
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+<table cellspacing="10">
+<tr align="center"><td><%= submit_tag 'Agregar' %></td></tr>
+<% end %>
+<tr align="center"><td><%= link_to 'Regresar', :action => 'list' %></td>
+</tr>
+</table>
+

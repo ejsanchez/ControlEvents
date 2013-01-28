@@ -1,0 +1,23 @@
+Buen día <%= @activity.person_responsable %>
+
+Se le comunica que la solicitud con folio <%= @activity.id %> ha sido autorizada, por lo que la actividad ha quedado programada en la lista de actividades del Instituto.
+
+Si usted requiriera algún cambio en los detalles de la solicitud, puede hacerlo, pero se le informa que la autorización será revocada y su solicitud será revisada de nuevo, por lo que se recomienda tomarlo en cuenta.
+
+DATOS DE LA ACTIVIDAD
+
+  Título: <%= @activity.name %>
+  Descripción: <%= @activity.description %>
+  Participantes: <%= @activity.participants %>
+  Instituciones que colaboran: <%= @activity.institutions %>
+  Tipo de actividad: <%= ActivityType.find(@activity.activity_type_id).name %>
+  Dirigido a: <% if @activity.opening == "abierto" %>Público en general<% else %>Sólo público con invitación<% end %>
+  Alcance: <%= @activity.reach %>
+
+DATOS DE LAS SESIONES <% counter=0 %><% @res = Activity.act_reservations(@activity.id) %><% for item in @res do %><% if item != nil %>
+  Sesión <%= counter+=1 %>:
+     Fecha: <%= item[:start_date] %>
+     Horario: <%= item[:start_time].strftime("%H:%M") %> - <%= item[:end_time].strftime("%H:%M") %>
+     Número aproximado de asistentes: <%= item[:assistants_num] %>
+     Espacio solicitado : <%= Space.find(item[:space_id]).name %> 
+     Solicitud de servicios adicionales: <%= item[:details] %><% end %><% end %>

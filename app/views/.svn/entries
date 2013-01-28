@@ -1,0 +1,94 @@
+10
+
+dir
+158
+svn+ssh://esanchez@lafa.iiec.unam.mx/home/svn/ControlEvents/app/views
+svn+ssh://esanchez@lafa.iiec.unam.mx/home/svn/ControlEvents
+
+
+
+2012-07-25T19:16:12.122890Z
+157
+webapps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7440a4ba-8474-47c6-8cc0-53c1f912fd4f
+
+notifier
+dir
+
+activity_types
+dir
+
+advance_days
+dir
+
+eventypes
+dir
+
+services
+dir
+
+reservations
+dir
+
+suppliers
+dir
+
+consult
+dir
+
+admin
+dir
+
+areas
+dir
+
+grantings
+dir
+
+managers
+dir
+
+layouts
+dir
+
+order_mailer
+dir
+
+activities
+dir
+
+login
+dir
+
+authorize
+dir
+
+registration
+dir
+
+requests
+dir
+
+holidays
+dir
+
+assigments
+dir
+
+spaces
+dir
+

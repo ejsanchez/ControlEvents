@@ -1,0 +1,18 @@
+<h1>Catálogo de servicios garantizados</h1>
+
+<p>Las actividades académicas organizadas por el IIEc cuentan con un conjunto de servicios garantizados y estos dependen del tipo de actividad del que se trate y se refiere a los servicios técnicos y administrativos que se le darán de manera asegurada a las reservaciones debidamente solicitadas y autorizadas.</p>
+<p>La asignación de servicios garantizados es como sigue:</p>
+
+<table>
+<tr>
+  <td><ul>
+<% for item in @actypes %>
+   <li><%= link_to_remote item.name,
+           :update=>"ajax_target",
+           :url=>{:action=>'grants',:id=>item.id}
+            %></li>
+<% end %>
+  </ul></td>
+  <td></td><td valign="top"><div id="ajtarget"><span id="ajax_target"></span></div></td>
+</tr>
+</table>

@@ -1,0 +1,34 @@
+<h1>Lista de días festivos</h1>
+
+<table cellspacing="7">
+  <tr>
+    <th colspan="2" align="center">AÑO : <%= @app_year %></th>
+  </tr>
+ <tr><td colspan="2"><hr/></td></tr>
+  <tr>
+<% for holiday in @holidays %>
+  <tr>
+  <% if holiday.app_date_end == nil%>
+    <td><%= day_format(holiday.app_date.strftime("%w " ))%><%=holiday.app_date.strftime("%d")%> de <%= day_format(holiday.app_date.strftime(" %m")) %></td>
+  <% else %>
+    <td>Del <%=holiday.app_date.strftime("%d")%> de 
+        <% if holiday.app_date.strftime(" %m") != holiday.app_date_end.strftime(" %m") %>
+            <%= day_format(holiday.app_date.strftime(" %m")) %>  
+        <% end %>
+            al <%=holiday.app_date_end.strftime("%d")%> 
+            de <%= day_format(holiday.app_date_end.strftime(" %m")) %></td>
+  <% end %>
+    <td align="center"><%= link_to 'Eliminar', { :action => 'destroy', :id => holiday }, :confirm => 'Va a quitar este día de la lista ¿Desea continuar?', :post => true %></td>
+  </tr>
+<% end %>
+  </tr>
+
+ <tr><td colspan="2"><hr/></td></tr>
+
+  <tr align="center">
+   <td><%= link_to 'Agregar día inhábil', :action => 'new' %></td>
+   <td><%= link_to 'Agregar periodo vacacional', :action => 'new_period' %></td>
+  </tr>
+</table>
+
+

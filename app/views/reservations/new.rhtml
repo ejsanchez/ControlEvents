@@ -1,0 +1,23 @@
+<h1>Agregar sesión a la solicitud.</h1>
+<table>
+<tr><td><strong>ACTIVIDAD: </strong></td>
+    <td><%= Activity.find(params[:id]).name %></td></tr>
+<!-- Estas lineas muestran la sala pedida en las reservaciones ya registradas, en caso de que se eligiera por actividad
+<tr><td><strong>Sala solicitada: </strong>
+    <td><%= Space.find(Activity.space_asked(params[:id])).name.capitalize %></td></tr> -->	
+</table>
+
+<% form_for :reservation, @reservation, :url=> {:action => 'create'} do |f| %>
+  <%= render :partial => 'form' %>
+
+  <%= hidden_field 'reservation', 'activity_id', "value" => params[:id] %>
+
+<!-- Estas lineas eran para mandar el espacio escogido para la actividad .... pero ahora se escoge por sesión
+  <%= hidden_field 'reservation', 'space_id', "value" => Reservation.find(:first,
+                          :conditions => ["activity_id = ?", params[:id]]).space_id %> -->
+<table>
+  <tr align="center"><td><%= submit_tag 'Agregar' %></td></tr>
+  <tr align="center"><td><%= link_to 'Regresar', :action => 'show', :controller=>'activities', :id=> params[:id]%></td></tr>
+</table>
+
+<% end %>

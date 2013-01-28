@@ -1,0 +1,32 @@
+Buen día, se le informa que la solicitud con folio <%= @activity.id %> ha sido autorizada, debe tomar en cuenta que si usted ya contaba con una orden de trabajo autorizada para esta actividad significa que ha sido modificada y tiene nuevos requerimientos.
+
+Se le ruega haga llegar esta solicitud a su equipo de trabajo para que sea atendida en tiempo y forma, tomando en cuenta los cambios; la orden de trabajo la puede obtener dando click en el siguiente vínculo: 
+
+http://aulas.iiec.unam.mx/notifier/pdf/<%= @activity.id %>
+
+Si la solicitud fuera cancelada o tuviera algún cambio, se le notificará por esta vía, y dado el caso se le proporcionará una nueva orden de trabajo. 
+
+Ahora la actividad ha quedado programada en la lista de actividades del Instituto con las siguientes características:
+
+DATOS DE LA ACTIVIDAD
+
+  Título: <%= @activity.name %>
+  Descripción: <%= @activity.description %>
+  Participantes: <%= @activity.participants %>
+  Instituciones que colaboran: <%= @activity.institutions %>
+  Tipo de actividad: <%= ActivityType.find(@activity.activity_type_id).name %>
+  Dirigido a: <% if @activity.opening == "abierto" %>Público en general<% else %>Sólo público con invitación<% end %>
+  Alcance: <%= @activity.reach %>
+
+  Responsable: <%= @activity.person_responsable %>
+
+DATOS DE LAS SESIONES <% counter=0 %><% @res = Activity.act_reservations(@activity.id) %><% for item in @res do %>
+<% if item != nil %>
+  Sesión <%= counter+=1 %>:
+     Fecha: <%= item[:start_date] %>
+     Horario: <%= item[:start_time].strftime("%H:%M") %> - <%= item[:end_time].strftime("%H:%M") %>
+     Número aproximado de asistentes: <%= item[:assistants_num] %>
+     Espacio solicitado : <%= Space.find(item[:space_id]).name %> 
+     Solicitud de servicios adicionales: <%= item[:details] %><% end %><% end %>
+
+Cualquier aclaración sobre lo anterior, favor de comunicarse con el responsable de la actividad.

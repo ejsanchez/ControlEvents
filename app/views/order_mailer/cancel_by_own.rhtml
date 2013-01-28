@@ -1,0 +1,25 @@
+Buen día, este mensaje es para comunicarle que la solicitud con folio <%= @activity.id%> ha sido cancelada 
+por el académico responsable de la misma, por lo que se le ruega lo haga saber a su equipo de trabajo para que 
+suspenda las acciones derivadas de dicha actividad.
+
+A la actividad cancelada le corresponden las siguientes características:
+
+DATOS DE LA ACTIVIDAD
+
+  Título: <%= @activity.name %>
+  Descripción: <%= @activity.description %>
+  Participantes: <%= @activity.participants %>
+  Instituciones que colaboran: <%= @activity.institutions %>
+  Tipo de actividad: <%= ActivityType.find(@activity.activity_type_id).name %>
+  Dirigido a: <% if @activity.opening == "abierto" %>Público en general<% else %>Sólo público con invitación<% end %>
+  Alcance: <%= @activity.reach %>
+
+DATOS DE LAS SESIONES <% counter=0 %><% @activity.reservations.each do |item| %><% if item != nil %>
+  Sesión <%= counter+=1 %>:
+     Fecha: <%= item[:start_date] %>
+     Horario: <%= item[:start_time].strftime("%H:%M") %> - <%= item[:end_time].strftime("%H:%M") %>
+     Número aproximado de asistentes: <%= item[:assistants_num] %>
+     Espacio solicitado : <%= Space.find(item[:space_id]).name %>
+     Solicitud de servicios adicionales: <%= item[:details] %><% end %><% end %>  
+
+Gracias por su atención.

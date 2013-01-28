@@ -1,0 +1,24 @@
+<%= error_messages_for 'holiday' %>
+
+<!--[form:holiday]-->
+
+<tr>
+ <th></th>
+ <th align="center" >(  AÑO - MES - DÍA  )</th>
+</tr>
+<tr>
+ <td><label for="holiday_app_date">Fecha de inicio: </label></td>
+ <td><%= date_field 'holiday', 'app_date', :add_month_numbers=>true %></td>
+</tr>
+<tr>
+ <td><label for="holiday_app_date">Fecha de fin: </label></td>
+ <td><%= date_field 'holiday', 'app_date_end', :add_month_numbers=>true %></td>
+</tr>
+<tr>
+  <td><%= hidden_field 'holiday', 'applicant_ip', "value" => request.remote_ip %></td>
+</tr>
+
+
+
+<!--[eoform:holiday]-->
+

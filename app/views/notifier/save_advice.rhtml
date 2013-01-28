@@ -1,0 +1,30 @@
+<h1>Buzón de sugerencias</h1>
+
+<p>Sus sugerencias y comentarios son importantes para nosotros y puede realizarlos en línea a través del siguiente formulario o si prefiere directamente a la secretaría técnica en la ext. 42489</p>
+
+<p>Este mensaje le será enviado al administrador de este sistema, quien es el responsable resolver sus dudas y/o atender sus demandas.</p>
+
+<% form_tag :action => 'send_advice' do %>
+<table cellspacing="10">
+ <tr>
+   <td>Nombre:</td>
+   <td><%= text_field("name", "", "size" => "40") %></td>
+ </tr>
+ <tr>
+   <td>Correo electrónico:</td>
+   <td><%= text_field("email", "", "size" => "40") %></td>
+ </tr>
+ <tr>
+   <td>Teléfono:</td>
+   <td><%= text_field("phone", "", "size" => "20") %></td>
+ </tr>
+ <tr>
+   <td>Comentario o <br/>Sugerencia:</td>
+   <td><%= text_area("content", "", "size" => "50", "rows" => "5") %></td>
+ </tr>
+ <tr>
+   <td align="center"><input type="submit" value=" Enviar " /></td>
+ </tr>
+</table>
+
+<% end %>

@@ -1,0 +1,21 @@
+<h1 class="title">Paso 1: Registro de actividades</h1>
+
+<p>Se recomienda que el registro de actividades esté sujeto a las políticas establecidas, por lo que si no las conoce,<br/> puede consultarlas en la sección correspondiente.</p>
+
+<% form_for :activity, @activity, :url => { :action => "create_activity" ,:controller=> "registration"} do |f| %>
+  <%= render :partial => 'activities/form' %>
+  <% fields_for :reservation, @reservation do |r| %>
+    <%= render :partial => 'reservations/form'%>
+  <% end %>
+
+  <small><i> Se piden sólo los datos de la primera sesión, en el siguiente paso podrá capturar los datos para sesiones adicionales.</i></small>
+
+  <p><font color=red>(*) Los campos marcados son de llenado obligatorio.</font> </p>
+
+
+<table>
+  <tr align="center"><td><%= submit_tag "Continuar" %></td></tr>
+<% end %>
+  <tr align="center"><td><%= link_to 'Cancelar registro', :action => 'index', :controller=>'consult' %></td></tr>
+</table>
+

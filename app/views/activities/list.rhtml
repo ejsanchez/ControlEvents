@@ -1,0 +1,22 @@
+<h1>Actividades programadas</h1>
+
+<table>
+
+<% @activities.each do |activity| %>
+  <tr>
+
+    <td><%= @actypes[activity.activity_type_id].name %>
+       <h2><%= activity.name %></h2>
+       <%= activity.description %><br><br>
+       <%= link_to 'Más información ...', activity.url %> 
+    </td>
+
+  </tr>
+  <tr><td colspan="2"><hr/></td></tr> 
+<% end %>
+</table>
+
+
+<%= will_paginate @activities %>
+
+

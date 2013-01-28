@@ -1,0 +1,26 @@
+Buen día <%= @admor.first_name %> <%= @admor.last_name %> <%= @admor.maiden_name %>
+
+La siguiente actividad ha sido modificada, por lo que a pesar de haber sido autorizada, 
+deberá revisarla nuevamente:
+
+DATOS DE LA ACTIVIDAD
+
+  Título: <%= @activity.name %>
+  Descripción: <%= @activity.description %>
+  Participantes: <%= @activity.participants %>
+  Instituciones que colaboran: <%= @activity.institutions %>
+  Tipo de actividad: <%= ActivityType.find(@activity.activity_type_id).name %>
+  Dirigido a: <% if @activity.opening == "abierto" %>Público en general<% else %>Sólo público con invitación<% end %>
+  Alcance: <%= @activity.reach %>
+  Académico responsable: <%= @activity.person_responsable %>
+  Teléfono: <%= @activity.phone_contact %>
+
+DATOS DE LAS SESIONES <% counter=0 %><% @res = Activity.act_reservations(@activity.id) %><% for item in @res do %>
+<% if item != nil %>
+  Sesión <%= counter+=1 %>:
+     Fecha: <%= item[:start_date] %>
+     Horario: <%= item[:start_time].strftime("%H:%M") %> - <%= item[:end_time].strftime("%H:%M") %>
+     Número aproximado de asistentes: <%= item[:assistants_num] %>
+     Espacio solicitado : <%= Space.find(item[:space_id]).name %><% end %><% end %>  
+
+Si tuviera alguna duda con respecto de estos datos, se le ruega ponerse en contacto con el responsable de la misma.

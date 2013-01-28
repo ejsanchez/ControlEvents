@@ -1,0 +1,15 @@
+<table cellspacing="10">
+<% @counter = 0 %>
+<% @qty.times { %>
+<%	@counter += 1%>
+	<tr><td><b>Sesión <%="#{@counter}"%></b></td></tr>
+	<tr><td><label for="added_start_date">Fecha:</label></td>
+	<td><%= date_field 'added', 'start_date', "index" => "#{@counter}" %></td>
+	<td><label for="added_start_time">Hora inicio:</label></td>
+	<td><%= options = Reservation::HOUR_OPTS 
+		select('added', 'start_time', options,{}, :index => "#{@counter}" )%></td>
+	<td><label for="added_end_time">Hora fin:</label></td>
+	<td><%= options = Reservation::HOUR_OPTS 
+		select('added', 'end_time', options,{}, :index => "#{@counter}" )%></td></tr>
+<%	    } %>
+</table>

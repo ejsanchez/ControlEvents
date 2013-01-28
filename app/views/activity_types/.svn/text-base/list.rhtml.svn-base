@@ -1,0 +1,21 @@
+<h1>Catálogo de tipo de actividades</h1>
+
+<table cellspacing="10">
+  <tr>
+    <th>Tipo de actividad</th>
+  </tr>
+  <tr><td><hr/></td></tr>   
+<% for activity_type in @activity_types %>
+  <tr>
+    <td><%=h activity_type.name %></td>
+    <td><%= link_to 'Editar', :action => 'edit', :id => activity_type %></td>
+    <td><%= link_to 'Borrar', { :action => 'destroy', :id => activity_type }, :confirm => '¿Está seguro de querer elimiar el tipo? Dejará de aparecer en la forma de registro de solicitudes', :post => true %></td>
+  </tr>
+<% end %>
+
+<tr align="center">
+<td><%= will_paginate @activity_types %> </td>
+</tr>
+<tr align="center"><td><%= link_to 'Agregar tipo', :action => 'new' %></td>
+</tr>
+</table>

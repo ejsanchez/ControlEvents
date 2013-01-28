@@ -1,0 +1,24 @@
+<h1>Catálogo de servicios</h1>
+
+<table cellspacing="10">
+  <tr>
+    <th>Servicio</th>
+    <th>Tipo de servicio</th>
+  </tr>
+  <tr><td colspan="2"><hr/></td></tr>   
+<% for service in @services %>
+  <tr>
+    <td><%=h service.name %></td>
+    <td><%= Servicetype.find(service.servicetype_id).name %></td>
+
+    <td><%= link_to 'Editar', :action => 'edit', :id => service %></td>
+    <td><%= link_to 'Borrar', { :action => 'destroy', :id => service }, :confirm => 'Are you sure?', :post => true %></td>
+  </tr>
+<% end %>
+  <tr align="center">
+    <td colspan="2"><%= will_paginate @services %> </td>
+  </tr>
+  <tr align="center"> 
+    <td colspan="2"><%= link_to 'Agregar un servicio', :action => 'new' %></td>
+  </tr>
+</table>

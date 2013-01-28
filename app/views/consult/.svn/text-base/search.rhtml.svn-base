@@ -1,0 +1,30 @@
+<h1>Programación de Actividades Académicas</h1>
+<h2><%= @space.name %></h2>
+
+<table width="700">
+<th><%= params[:nmonth] %></th> 
+  <% activity_ant = 0 %>
+  <% for res in @reservations do %>    
+    <% if res.activity_id == activity_ant %>
+      <tr><td></td><td><%= res.start_date %> de <%= res.start_time.strftime("%H:%M") %> a <%= res.end_time.strftime("%H:%M") %></td></tr>
+    <% else %>
+      <tr><td colspan="2"><hr/></td></tr>
+      <tr><td><%= ActivityType.find(Activity.find(res.activity_id).activity_type_id).name %></td>
+          <td colspan="2"><strong><i>" <%= Activity.find(res.activity_id).name %> "</i></strong></td></tr> 
+      <tr><td>Coordina: </td>
+          <td colspan="2"><%= Activity.find(res.activity_id).person_responsable %></td>
+      </tr>
+        <% if Activity.find(res.activity_id).participants != nil%>
+      <tr><td>Participantes: </td>
+          <td colspan="2"><%= line_format((Activity.find(res.activity_id).participants).to_s) %></td>
+      </tr>
+        <% end %>
+      <tr><td>Sesiones:</td>	
+          <td><%= res.start_date %> de <%= res.start_time.strftime("%H:%M") %> a <%= res.end_time.strftime("%H:%M") %></td></tr>
+      <% activity_ant = res.activity_id %> 
+    <% end %>
+  <% end %>
+  <tr><td colspan="2"><hr/></td></tr>   
+  <tr><td colspan="2"><%= link_to 'Ver otro mes', :action => 'select_month', :id => @space.id %> | 
+      <%= link_to 'Ver otro espacio', :action => 'space' %></td></tr> 
+</table>

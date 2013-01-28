@@ -1,0 +1,40 @@
+10
+
+dir
+158
+svn+ssh://esanchez@lafa.iiec.unam.mx/home/svn/ControlEvents/app
+svn+ssh://esanchez@lafa.iiec.unam.mx/home/svn/ControlEvents
+
+
+
+2012-09-19T18:57:05.726083Z
+158
+esanchez
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7440a4ba-8474-47c6-8cc0-53c1f912fd4f
+
+helpers
+dir
+
+models
+dir
+
+controllers
+dir
+
+views
+dir
+

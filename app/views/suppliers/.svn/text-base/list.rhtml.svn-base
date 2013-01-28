@@ -1,0 +1,29 @@
+<h1>Catálogo de proveedores de servicios</h1>
+
+<table cellspacing = "10">
+  <tr>
+    <th>Nombre </th>
+    <th>Ubicación </th>
+    <th>Tipo de servicio</th>
+    <th>Teléfono </th>
+    <th>Correo electrónico </th>
+  </tr>
+  <tr><td colspan="5"><hr/></td></tr> 
+  
+<% for supplier in @suppliers %>
+  <tr>
+    <td><%=h supplier.name %></td>
+    <td><%=h supplier.location %></td>
+    <td><%=h Servicetype.find(supplier.servicetype_id).name %></td>
+    <td><%=h supplier.phone %></td>
+    <td><%=h supplier.email %></td>
+    <td><%= link_to 'Editar', :action => 'edit', :id => supplier %></td>
+    <td><%= link_to 'Borrar', { :action => 'destroy', :id => supplier }, :confirm => 'Va a eliminar a este contacto, y dejarán de llegarle los avisos, ¿desea continuar?', :post => true %></td>
+  </tr>
+<% end %>
+
+<tr>
+  <td colspan="5"><%= will_paginate @suppliers %></td>
+</tr>
+<tr align="center"><td colspan="5"><%= link_to 'Agregar contacto', :action => 'new' %></td></tr>
+</table>

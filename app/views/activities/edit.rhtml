@@ -1,0 +1,12 @@
+<h1>Modificación de la solicitud</h1>
+
+<% form_for :activity, @activity, :url=>{:action => 'update', :id => @activity} do |f| %>
+  <%= render :partial => 'form' %>
+
+<table>
+  <tr><td width="450" align="center"><%= submit_tag 'Guardar cambios' %></td></tr>
+<% end %>
+  <tr>
+      <td align="center"><%= link_to 'Regresar', :action => 'show', :id=> @activity %></td>
+  </tr>
+</table>

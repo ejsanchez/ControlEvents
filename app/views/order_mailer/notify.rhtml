@@ -1,0 +1,31 @@
+Buen día <%= @admor.first_name %> <%= @admor.last_name %> <%= @admor.maiden_name %>
+
+La siguiente solicitud de reservación ha sido registrada:
+
+Se le solicita revisarla para que sea autorizada o rechazada, según lo crea necesario.
+
+Esta es la orden de trabajo correspondiente: http://aulas.iiec.unam.mx/notifier/pdf/<%= @activity.id %>
+
+Si usted es secretario recuerde que debe someter a aprobación esta solicitud ante el secretario de su área.
+
+DATOS DE LA ACTIVIDAD
+
+  Título: <%= @activity.name %>
+  Descripción: <%= @activity.description %>
+  Participantes: <%= @activity.participants %>
+  Instituciones que colaboran: <%= @activity.institutions %>
+  Tipo de actividad: <%= ActivityType.find(@activity.activity_type_id).name %>
+  Dirigido a: <% if @activity.opening == "abierto" %>Público en general<% else %>Sólo público con invitación<% end %>
+  Alcance: <%= @activity.reach %>
+  Académico responsable: <%= @activity.person_responsable %>
+  Correo electrónico : <%= @activity.email_contact %>
+  Teléfono: <%= @activity.phone_contact %>
+
+DATOS DE LAS SESIONES <% counter=0 %><% @activity.reservations.each do |item| %><% if item != nil %>
+  Sesión <%= counter+=1 %>:
+     Fecha: <%= item[:start_date] %>
+     Horario: <%= item[:start_time].strftime("%H:%M") %> - <%= item[:end_time].strftime("%H:%M") %>
+     Número aproximado de asistentes: <%= item[:assistants_num] %>
+     Espacio solicitado : <%= Space.find(item[:space_id]).name %><% end %><% end %>  
+
+Si tuviera alguna duda con respecto de estos datos, se le ruega ponerse en contacto con el responsable de la misma.

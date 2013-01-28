@@ -1,0 +1,28 @@
+<%= error_messages_for 'service' %>
+
+<!--[form:service]-->
+<table cellspacing="10">
+<tr>
+   <td><label for="service_name"><font color="red">*</font>Nombre: </label></td>
+   <td><%= text_field 'service', 'name'  %></td>
+</tr>
+<tr>
+   <td><label for="service_name"><font color="red">*</font>Tipo de servicio: </td>
+   <td><%= select 'service', 'servicetype_id', Servicetype.find_all.collect {|t|[t.name, t.id]}%></td>
+</tr>
+
+<tr>
+   <td><label for="service_priority">Orden: </td>
+   <td><%= text_field 'service', 'priority', "size"=>"3"  %></td>
+</tr>
+
+<tr>
+   <td><label for="service_details">Detalles: </label></td>
+   <td><%= text_area 'service', 'details' ,"cols"=>49, "rows"=> 3  %></td>
+   <td><%= hidden_field 'service', 'applicant_ip', "value" => request.remote_ip %></td>
+</tr>
+
+</table>
+
+<!--[eoform:service]-->
+

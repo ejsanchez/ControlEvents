@@ -1,0 +1,20 @@
+<h1>Reporte de actividades planeadas</h1>
+
+<% form_tag :action => 'list_report' do %>
+<table>
+<tr>
+  <td>Fecha inicio: </td>
+  <td><%= date_field 'report', 'begin_date', "size" => "10"%></td>
+</tr>
+
+<tr>
+  <td>Fecha fin: </td>
+  <td><%= date_field 'report', 'end_date', "size" => "10"%></td>
+</tr>
+
+<tr>
+  <td colspan="2" align="center"><input type="submit" value="Listar" />
+<input type="button" value="Cancelar" onClick=location.href="/authorize/index/"></td>
+</tr>
+</table>
+<% end %>

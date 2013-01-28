@@ -1,0 +1,23 @@
+<h1>Programación de Actividades Académicas</h1>
+<h2><%= @space.name %></h2>
+
+<table>
+ <tr><td>Elija el mes que desea consultar</td></tr>
+ <tr><td>
+  <table border="1">
+  <tr><td align="center"><%= link_to 'Enero', :action=>'search', :id => @space.id, :month=> "01", :nmonth =>"Enero" %></td>
+    <td align="center"><%= link_to 'Febrero', :action=>'search', :id => @space.id, :month=> "02", :nmonth =>"Febrero" %></td>
+    <td align="center"><%= link_to 'Marzo', :action=>'search', :id => @space.id, :month=> "03", :nmonth =>"Marzo" %></td>
+    <td align="center"><%= link_to 'Abril', :action=>'search', :id => @space.id, :month=> "04", :nmonth =>"Abril" %></td></tr>
+  <tr><td align="center"><%= link_to 'Mayo', :action=>'search', :id => @space.id, :month=> "05",:nmonth=>"Mayo" %></td>
+     <td align="center"><%= link_to 'Junio', :action=>'search', :id => @space.id, :month=> "06", :nmonth =>"Junio" %></td>
+     <td align="center"><%= link_to 'Julio', :action=>'search', :id => @space.id, :month=> "07", :nmonth =>"Julio" %></td>
+     <td align="center"><%= link_to 'Agosto', :action=>'search', :id => @space.id, :month=> "08", :nmonth =>"Agosto" %></td></tr>
+  <tr><td align="center"><%= link_to 'Septiembre', :action=>'search', :id => @space.id, :month=> "09", :nmonth =>"Septiembre" %></td>
+    <td align="center"><%= link_to 'Octubre', :action=>'search', :id => @space.id, :month=> "10", :nmonth =>"Octubre" %></td>
+    <td align="center"><%= link_to 'Noviembre', :action=>'search', :id => @space.id, :month=> "11", :nmonth =>"Noviembre" %></td>
+     <td align="center"><%= link_to 'Diciembre', :action=>'search', :id => @space.id, :month=> "12", :nmonth =>"Diciembre" %></td></tr>
+  </table></td></tr>  
+  <tr><td align ="center"><%= link_to 'Ver otro espacio', :action=>'space', :controller => 'consult' %></td></tr>
+</table>
+

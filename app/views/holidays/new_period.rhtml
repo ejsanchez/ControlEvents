@@ -1,0 +1,18 @@
+<h1>Agregar periodo de vacaciones</h1>
+
+<table cellspacing="10">
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form_period' %>
+  
+
+  <tr align="center">
+   <td colspan="2"><%= submit_tag "Agregar" %></td>
+  </tr>
+<% end %>
+  <tr align="center">
+   <td colspan="2"><%= link_to 'Regresar', :action => 'list' %></td>
+  </tr>
+
+</table>
+

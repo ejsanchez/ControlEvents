@@ -1,0 +1,87 @@
+<!--[form:activity]-->
+
+<table>
+
+ <tr><td colspan="5"><b>DATOS DE LA ACTIVIDAD</b></td></tr>
+ <tr><td colspan="5"><hr/></td></tr>
+
+ <tr><td><label for="activity_name"><font color=red>*</font> Título:</label></td>
+     <td colspan="4"><%= text_field 'activity', 'name', "size"=>62  %></td></tr>
+
+ <tr><td><label for="activity_description"><font color=red>*</font> Descripción:</label></td>
+     <td colspan="4"><%= text_area 'activity', 'description',"cols"=>60, "rows"=> 4 %></td></tr>
+
+ <tr><td><label for="activity_participants"><font color=red>*</font> Participantes:</label></td>
+     <td colspan="4"><%= text_area 'activity', 'participants',"cols"=>60, "rows"=> 2 %></td></tr>
+
+ <tr><td></td><td colspan="4"><small><i>Indicar nombres de ponentes, comentaristas, moderadores, etc.<br/>Ej. Ponente: [Nombre completo] [Institución de procedencia]</i> <br/>NOTA: En caso de seminarios sólo incluya datos del coordinador y comité académico.</small></td>
+ </tr>
+
+ <tr><td><label for="activity_institutions"><font color=red></font> Instituciones<br/> que colaboran:</label></td>
+     <td colspan="4"><%= text_area 'activity', 'institutions',"cols"=>60, "rows"=> 2 %></td></tr>
+
+ <tr><td><label for="activity_type"><font color=red>*</font> Tipo de actividad: </label></td>
+     <td colspan="4"><%= select 'activity', 'activity_type_id', ActivityType.find(:all,:order=>'name').collect {|p|[p.name, p.id]}, { :include_blank => true }%>
+
+ <tr><td><label for="activity_openning">Dirigido a: </label></td>
+     <td colspan="2">
+	<%=
+ 	 options = Activity::OPEN_OPTS 
+ 	 select('activity', 'opening', options)
+	%></td>
+
+     <td><label for="activity_reach">Alcance: </label></td>
+     <td>
+	<%=
+ 	 options = Activity::REACH_OPTS 
+ 	 select('activity', 'reach', options)
+	%></td>
+ </tr>
+
+ <!-- <tr><td><label for="activity_url">Sitio web:</label></td>
+     <td colspan="4"><%= text_field 'activity', 'url', "size"=>40, "value" => "http://"  %></td></tr>
+ <tr><td></td><td colspan="4"><small><i>Para que el vínculo funcione adecuadamente debe capturar la dirección desde <br/>el http:// ... de lo contrario no lo hará.</i></small></td>
+ </tr> -->
+
+ <% if params[:context] == 'edit' %>
+     <td colspan="4"></td></tr>
+ <% else %>
+ <tr><td><label for="activity_pass"><font color=red>*</font> Contraseña:</label></td>
+     <td><%= password_field 'activity', 'password', "maxlength" => 10, "size"=>10 %></td>
+     <td><label for="activity_pass_conf"><font color=red>*</font> Confirme contraseña:</label></td>
+     <td colspan="4"><%= password_field 'activity', 'password_confirmation', "maxlength" => 10, "size"=>10 %></td></tr>
+ <tr><td></td><td colspan="4"><small><i> Debe colocar una contraseña de 10 caracteres como máximo pudiendo usar <br/>letras y números.<br/> Esta contraseña será asignada sólo a esta actividad y el sistema se la pedirá <br/>para poder realizar cualquier modificación sobre la misma. </i></small></td></tr>
+ <% end %>
+  <tr><td colspan="4"><%= hidden_field 'activity', 'applicant_ip', "value" => request.remote_ip %>
+                     <%= hidden_field 'activity', 'assistants_num', "value" => 1 %>
+     </td></tr>
+</table>
+
+<table>
+
+ <tr><td colspan="4"><b>DATOS DE CONTACTO</b></td></tr>
+
+ <tr><td colspan="4"><hr/></td></tr>
+
+ <tr><td><label for="activity_person_reg"><font color=red>*</font> Persona que registra:</label></td>
+     <td><%= text_field 'activity', 'person_reg',"size"=>45   %></td></tr>
+
+ <tr><td><label for="activity_person_responsable"><font color=red>*</font> Académico responsable <br/>   de la actividad:</label></td>
+     <td><%= text_field 'activity', 'person_responsable',"size"=>45   %></td></tr>
+
+<tr><td><label for="project_name">Proyecto de investigación: </label></td>
+     <td><%= text_field 'activity', 'project_name',"size"=>60 %></td></tr>
+
+ <tr><td><label for="activity_area"><font color=red>*</font> Unidad de Investigación<br/> o Área: </label></td>
+     <td colspan="4"><%= select 'activity', 'area_id', Area.find(:all,:order=>'name').collect {|a|[a.name, a.id]}, { :include_blank => true }%>
+
+ <tr><td><label for="activity_email_contact"><font color=red>*</font> Correo electrónico del <br/> académico responsable:</label></td>
+     <td><%= text_field 'activity', 'email_contact',"size"=>38   %></td></tr>
+
+ <tr><td><label for="activity_phone_contact"><font color=red>*</font> Teléfono:</label></td>
+     <td><%= text_field 'activity', 'phone_contact', "size"=>15 %></td></tr>
+
+</table>
+
+<!--[eoform:activity]-->
+

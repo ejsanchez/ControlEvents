@@ -1,0 +1,11 @@
+<h1>Catálogo de tipo de actividad</h1>
+
+<% form_tag :action => 'update', :id => @activity_type do %>
+  <%= render :partial => 'form' %>
+<table cellspacing="10">
+<tr align="center"><td><%= submit_tag 'Guardar cambios' %></td></tr>
+<% end %>
+<tr align="center"><td><%= link_to 'Regresar', :action => 'list' %></td>
+</tr>
+</table>
+

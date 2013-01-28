@@ -1,0 +1,18 @@
+<%= error_messages_for 'granting' %>
+
+<!--[form:granting]-->
+
+<table>
+ <tr>
+  <td><label for="granting_activity_type"><font color=red>*</font> Tipo de actividad:</label></td>
+  <td><%= select 'granting', 'activity_type_id', ActivityType.find_all.collect {|p|[p.name, p.id]}%></td>
+ </tr>
+ <tr>
+  <td><label for="granting_service_id"><font color=red>*</font> Servicio:</label></td>
+  <td><%= select 'granting', 'service_id', Service.find_all.collect {|s|[s.name, s.id]}%></td>
+  <td><%= hidden_field 'granting', 'applicant_ip', "value" => request.remote_ip %></td>
+ </tr>
+</table>
+
+<!--[eoform:granting]-->
+

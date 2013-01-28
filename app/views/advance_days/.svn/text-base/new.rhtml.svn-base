@@ -1,0 +1,12 @@
+<h1>Nueva anticipación</h1>
+
+<table>
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <tr><td></td>
+    <td><%= submit_tag "Enviar" %></td>
+  </tr>
+<% end %>
+
+<tr><td><%= link_to 'Regresar', :action => 'list' %></td></tr>
+</table>

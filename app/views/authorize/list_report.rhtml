@@ -1,0 +1,55 @@
+<h1 align ="center">Instituto de Investigaciones económicas - UNAM</h1>
+<h2 >Actividades planificadas del <%= @period[:begin_date]%> al <%= @period[:end_date]%> </h2>
+<div id="report">
+<table border="1">
+   <tr><th>Folio</th>
+       <th>Tipo de actividad</th>
+       <th>Nombre</th>
+       <th>Responsable</th>
+       <th>Participantes</th>
+       <th>Unidad o Departamento</th>
+       <th>Detalles</th>
+   </tr>
+<% last_activity = 0 %>
+<% sede = 0 %>
+
+<% for session in @sessions do %>
+  <%if session.activity_id != last_activity %> 
+    <% sede = 0 %>
+    <% if last_activity != 0 %>
+      </td></tr>    
+    <%end%>
+    <% activity = Activity.find(session.activity_id) %>
+    <tr>
+      <td align="center"><%= activity.id %></td> 
+      <td><%= ActivityType.find(activity.activity_type_id).name %></td> 
+      <td width="150"><%= activity.name %></td> 
+      <td><%= activity.person_responsable %></td> 
+      <td width="150"><%= activity.participants %></td> 
+     <% if activity.area_id != nil %>
+      <td width="150"><%= Area.find(activity.area_id).name %></td> 
+      <td> 
+     <% else %>
+      <td width="150">No indicado</td> 
+      <td> 
+     <% end %>
+  <%end%>
+    <% # @res = Activity.act_reservations(activity.id) %>
+    <%# for item in @res do %>
+  <% if sede != session.space_id%>
+        <%= Space.find(session.space_id).name %><br/>
+        <b><%= session.start_date %></b> de <%= session.start_time.strftime("%H:%M") %> a <%= session.end_time.strftime("%H:%M") %>
+        <br/>
+  <%else%>
+      <b><%= session.start_date %></b> de <%= session.start_time.strftime("%H:%M") %> a <%= session.end_time.strftime("%H:%M") %>
+      <br/>
+  <% end %>
+    <%# end %>
+  <% sede = session.space_id %>
+  <% last_activity= session.activity_id %>
+<% end %>
+</table>
+</div>
+
+
+

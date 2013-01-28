@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr">
+<%  headers["Content-Type"] = "text/html; charset=utf-8" %>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>UNAM - IIEc - Control de eventos</title>
+  <link rel="shortcut icon" href="/images/favicon.ico"
+  type="image/x-icon" />
+  <% ext_base = 'http://www.iiec.unam.mx/themes/iiec/'
+     ext_css = %w(html-elements iiec layout-garland icons)
+     %>
+  <%= ext_css.map {|css| stylesheet_link_tag(ext_base + css + '.css')} %>
+  <%= stylesheet_link_tag('calendar.css') %>
+  <%= stylesheet_link_tag('aulas.css') %>
+
+  <!--[if IE]><%= stylesheet_link_tag(ext_base+'msie.css') %><![endif]-->
+  <%= javascript_include_tag 'calendar' %>
+  <%= javascript_include_tag 'prototype','effects','dragdrop' %>
+
+</head>
+
+<body>
+  <div id="page">
+
+    <div id="unamhead">
+      <a href="http://www.unam.mx/" 
+         title="Universidad Nacional Autónoma de México"><span id="logounam">
+      </span>
+      </a>
+      <a href="http://www.iiec.unam.mx/" 
+         title="Instituto de Investigaciones Económicas">
+        <span id="logoiiec">
+        </span>
+      </a>
+    </div><!--/#unamhead -->
+
+    <div id="topnav">
+
+      <div id="topnav-region">
+        <div id="primary" class="clear-block">
+	  <%= menu_iiec %>
+	</div><!--/#topnav /#topnav-region /#primary-->
+      </div><!--/#topnav /#topnav-region-->
+
+      <div class="loginlink">
+	<% if session[:manager_id] or session[:admin] %>
+	  <%= link_to('Cerrar sesión', 
+	              :controller => 'login', :action => 'logout') %>
+	<% else %>
+           <% if session[:activity_id] %>
+             <%= link_to('Salir del sistema', :controller => 'activities', :action => 'exit') %>
+           <% else %>    
+	     <%= link_to('Entrar como administrador', :controller => 'login', :action => 'login') %>
+           <% end %>
+	<% end %>
+      </div><!--/#topnav /#loginlink-->
+    </div><!--/#topnav -->
+
+    <div id="container" class="clear-block">
+      <div id="sidebar-left" class="column sidebar">
+	<div class="block block-menu">
+	  <h2 class="title">Reservación de salas</h2>
+	<%= render_menu(@menu) %>
+         </div><!--/#container /#clear-block-->
+      </div><!--/#container /#clear-block /#sidebar-left-->
+
+      <div id="squeeze" class="clear-block">
+	<div id="content">
+
+          <% if !flash.empty? %>
+	    <div id="flash">
+	      <% [:error, :warning, :notice, :message].each do |level| %>
+	        <% if flash[level] and !flash[level].empty? %>
+	          <%= '<div class="%s">%s</div>' % [level, flash[level]] %>
+		  <% flash.discard(level) %>
+		<% end %>
+	      <% end %>
+	    </div><!--/#flash -->
+	  <% end %>
+
+	  <%= @content_for_layout %>
+
+	</div><!--/#squeeze /#content -->
+      </div><!--/#squeeze -->
+    </div><!--/#container -->
+<% if session[:manager_id]==nil and session[:activity_id]==nil %>
+    <div id="footer-wrapper"><div id="footer">
+	<%= footer_iiec %>               
+      </div><!-- /#footer-message -->
+    </div> <!-- /#footer, /#footer-wrapper -->
+<% end %>
+  </div> <!-- /#page -->
+</body>
+</html>
+
+

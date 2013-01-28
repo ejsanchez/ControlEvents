@@ -1,0 +1,21 @@
+<% form_tag :action => 'cancel', :id => params[:id], :context=> params[:context] do %>
+<table>
+ <tr><td><p>Va a <i><strong>cancelar</strong></i> esta actividad y toda atención solicitada para ésta. </p>
+     <p>Si está seguro de querer realizar esta acción escriba la razón por la que quiere cancelar y de click en <i><b>Confirmar</b></i>.</p>
+     <p>De lo contrario de click en <i><b>Regresar</b></i> para ver los datos de la actividad.</p></td></tr>
+ <tr><td><p>Motivo de la cancelación:</p></td></tr>
+ <tr><td><p><%= text_area_tag "reason", nil, :size => "80x4" %></p></td></tr>
+
+ <tr align="center">
+  <td align ="center"><%= submit_tag 'Confirmar'%></td>
+ </tr>
+ <tr align ="center">
+<% if session[:manager_id] == nil%>
+  <td><%= link_to 'Regresar', :action => 'show', :controller=>'activities',:id=>"#{params[:id]}", :context=> "#{params[:context]}" %>
+<% else %>
+  <td><%= link_to 'Regresar', :action => 'show', :controller=>'authorize',:id=>"#{params[:id]}", :context=>"#{params[:context]}" %>
+<% end %> 
+  </tr>
+</table>
+
+<% end %>

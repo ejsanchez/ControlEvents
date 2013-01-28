@@ -1,0 +1,13 @@
+<h1>Editing advance_day</h1>
+
+<table cellpadding="5">
+<% form_tag :action => 'update', :id => @advance_day do %>
+  <%= render :partial => 'form' %>
+  <tr><td></td>
+    <td><%= submit_tag 'Editar' %></td>
+  </tr>
+<% end %>
+  <tr>
+    <td><%= link_to 'Regresar', :action => 'list' %></td>
+  </tr>
+</table>

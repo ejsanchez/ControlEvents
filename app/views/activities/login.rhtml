@@ -1,0 +1,11 @@
+<h1 align="center">Autenticación del académico responsable</h1>
+<br/>
+<center><b><%= Activity.find(params[:id]).name %></b></center>
+<div id="loginreq">
+<% form_tag :action => 'permit_access', :id => params[:id], :context=> "login" do %>
+   Contraseña:  <%= password_field("activity", "password","size"=>"15") %>  <input type="submit" value=" Entrar " />
+<% end %>
+<small>* Se trata de la contraseña que registró al momento de hacer la solicitud.</small>
+</div>
+
+

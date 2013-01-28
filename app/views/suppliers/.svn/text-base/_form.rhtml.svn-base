@@ -1,0 +1,27 @@
+<%= error_messages_for 'supplier' %>
+
+<!--[form:supplier]-->
+
+<tr><td><label for="supplier_first_name"><font color="red">*</font>Nombre(s):</label></td>
+<td><%= text_field 'supplier', 'first_name'  %></td></tr>
+
+<tr><td><label for="supplier_last_name"><font color="red">*</font>Apellido paterno:</label></td>
+<td><%= text_field 'supplier', 'last_name'  %></td></tr>
+
+<tr><td><label for="supplier_maiden_name">Apellido materno:</label></td>
+<td><%= text_field 'supplier', 'maiden_name'  %></td></tr>
+
+<tr><td><label for="service_name"><font color="red">*</font>Tipo de servicio: </td>
+<td><%= select 'supplier', 'servicetype_id', Servicetype.find(:all).collect {|t|[t.name, t.id]}%></td></tr>
+
+<tr><td><label for="supplier_location">Ubicación:</label></td>
+<td><%= text_field 'supplier', 'location'  %></td></tr>
+
+<tr><td><label for="supplier_phone"><font color="red">*</font>Teléfono:</label></td>
+<td><%= text_field 'supplier', 'phone'  %></td></tr>
+
+<tr><td><label for="supplier_email"><font color="red">*</font>Correo Electrónico:</label></td>
+<td><%= text_field 'supplier', 'email'  %></td></tr>
+
+<!--[eoform:supplier]-->
+

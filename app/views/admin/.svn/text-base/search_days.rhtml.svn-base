@@ -1,0 +1,31 @@
+<div id="titulo">
+<h1>Actualización del calendario</h1>
+</div>
+     <pre><% @nw_days.to_yaml%></pre>
+<h2>Instrucciones</h2>
+<ol>
+ <li>La siguiente información debe ser guardada en un archivo con extensión .csv, para hacerlo seleccione TODOS los datos y copie, pegue en un editor de texto plano en su computadora. </li>
+  <li>Guarde el archivo a través de la opción Guarda como y coloque la extensión .csv. Ej."actividades.csv"</li>
+ <li>Recuerde que el archivo tiene una estructura estricta, y que cualquier cambio puede atentar contra el funcionamiento del calendario.</li>
+ <li>Debe añadir los datos al calendario activo usando como entrada de datos el archivo que acaba de generar. </li>
+</ol>
+<h2>Contenido del archivo</h2>
+<small>
+<table cellspacing="5">
+ <tr><td><b>Subject,Start Date,Start Time,End Date,End Time,Location,Description</b></td></tr>
+
+ <% for item in @nw_days %>
+     <% sd = "#{item.app_date.strftime("%d/%m/%Y")}" %>
+   <% if item.app_date_end == nil %>
+     <% ed = sd %>
+   <% else %>
+     <% ed = "#{item.app_date_end.strftime("%d/%m/%Y")}" %>
+   <%  end %>
+     <% st = "00:00" %>
+     <% et = "00:00" %>
+     <% sp = "Todas las aulas" %>
+     <tr><td>Día inhábil,<%= "#{sd},#{st},#{ed},#{et},#{sp}" %>,Día inhábil</td></tr>
+ <% end %>
+
+</table>
+</small>

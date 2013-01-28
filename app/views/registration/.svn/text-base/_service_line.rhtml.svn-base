@@ -1,0 +1,45 @@
+<table>
+ <tr>
+   <td valign="top">
+    <table>
+     <tr>
+       <td><h3><%= Servicetype.find(2).name %></h3></td>
+     </tr>
+     <% Service.tec_services.each do |ser| %>
+     <tr>
+       <td><%= ser.name %></td>
+       <td><%= check_box("added", ser.id, {}, "yes", "no") %></td>
+     </tr>
+     <% end %>
+    </table>
+   </td>
+   <td></td>
+   <td valign="top">
+    <table>
+     <tr>
+       <td><h3><%= Servicetype.find(1).name %></h3></td>
+     </tr>
+     <% Service.adm_services.each do |ser| %>
+     <tr>
+       <td><%= ser.name %></td>
+       <td><%= check_box("added", ser.id, {}, "yes", "no") %></td>
+     </tr>
+     <% end %>
+     <tr>
+      <table>
+      <tr>
+        <td><h3><%= Servicetype.find(3).name %></h3></td>
+      </tr>
+      <% Service.dif_services.each do |ser| %>
+      <tr>
+        <td><%= ser.name %></td>
+        <td><%= check_box("added", ser.id, {}, "yes", "no") %></td>
+      </tr>
+      <% end %>
+      </table>
+      </tr>
+    </table>
+   </td>
+ </tr>
+</table>
+

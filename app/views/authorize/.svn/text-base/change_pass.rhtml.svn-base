@@ -1,0 +1,24 @@
+<h1>Cambio de contraseña</h1>
+
+<% form_tag :action => 'app_change_pass' do %>
+<table>
+<tr>
+  <td>Contraseña actual: </td>
+  <td><%= password_field("manager", "current_passwd","size"=>"15") %></td>
+</tr>
+
+<tr>
+  <td>Nueva Contraseña: </td>
+  <td><%= password_field("manager", "new_passwd","size"=>"15") %></td>
+</tr>
+
+<tr>
+  <td>Confirmación de la nueva contraseña: </td>
+  <td><%= password_field("manager", "new_passwd2","size"=>"15") %></td>
+</tr>
+<tr>
+  <td colspan="2" align="center"><input type="submit" value="Cambiar" />
+<input type="button" value="Cancelar" onClick=location.href="/authorize/index/"></td>
+</tr>
+</table>
+<% end %>
